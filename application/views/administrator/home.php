@@ -86,7 +86,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center mb-70">
                     <div class="section-title">
-                        <h4>Selamat Datang, <?= $this->session->userdata('nama');?>!</h4>
+                        <h4>Selamat Datang, ADMIN <?= $this->session->userdata('nama');?>!</h4>
                     </div>
                 </div>
             </div>
@@ -174,7 +174,7 @@
                             <a href="#"><i class="fas fa-pencil-alt"></i></a>
                         </div>
                         <div class="item-content">
-                            <h6><a href="#">File Download</a></h6>
+                            <h6><a href="<?php echo base_url('administrator/download')?>">File Download</a></h6>
                             <p>Pengaturan File Download</p>
                         </div>
                     </div>

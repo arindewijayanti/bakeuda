@@ -1,83 +1,6 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="description" content="Be-one is a clean HTML5/CSS3 template suitable for Business, Corporate, Taxes, Broker, Ad...">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<!-- Title -->
-<title>Website Resmi Badan Keuangan Daerah Kota Padangsidimpuan</title>
-
-<!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url()?>assets/img/favicon.ico">
-
-
-<!-- CSS Here -->
-   <!-- MagnificPopup.css -->
-   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/magnific-popup.css">
-   <!-- SlickNav.css -->
-   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/slicknav.min.css">
-   <!-- Owl.carousel.css -->
-   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel-2.3.4.min.css">
-   <!-- Fontawesome.css -->
-   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/fontawesome-free-5.12.0.min.css">
-   <!-- Bootstrap.css -->
-   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap-4.3.1.min.css">
-   <!-- Default.css -->
-   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/default.css">
-   <!-- Style.css -->
-   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
-   <!-- Responsive.css -->
-   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/responsive.css">
-
-   <!-- ColorNip.css -->
-   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/colornip.min.css">
-   <link id="theme" rel="stylesheet" href="<?php echo base_url()?>assets/css/theme-colors/theme-default.css">
-
-
-   <!-- Jquery -->
-   <script src="<?php echo base_url()?>assets/js/jquery-3.4.1.min.js"></script>
-
-</head>
-<body>  
-    <!-- Start Header Area -->
-    <div>
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="row">
-                    <div class="col-lg-14 col-14">
-                            <br>
-                            <table>
-                            <tr>
-                            <td><img src="<?php echo base_url('assets/')?>logo.jpg" alt="" width="100"></td>
-                            <td>
-                            <h4>&nbsp PEMERINTAH KOTA PADANGSIDIMPUAN</h4>
-                            <h4>&nbsp BADAN KEUANGAN DAERAH</h4>
-                            </td>
-                            <td>
-                            <nav class="menu-wrapper">
-                            <ul class="main-menu">
-                                <b><li class="active"><a href="#">Beranda</a></li></b>
-                                <b><li><a href="#feature">Tentang Bakeuda</a></li></b>
-                                <b><li><a href="#blog">Download</a></li></b>
-                                <b><li><a href="#contact-us">Situs Terkait</a></li></b>
-                            </ul>
-                            </nav>
-                            </td>
-                            <tr>
-                            </table>
-                    </div>
-                    <div class="col-6 d-lg-none static text-right">
-                        <div class="show-mobile-menu"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Header Area -->
+<?php 
+$this->load->view('include/header'); 
+?>
     <br>
     <!-- Start Slider Area -->
     <div class="slider-area ">
@@ -151,7 +74,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center mb-70">
                     <div class="section-title">
-                        <h4>Galeri</h4>
+                        <h4>Galeri Kegiatan Bakeuda</h4>
                     </div>
                 </div>
             </div>
@@ -346,55 +269,12 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="section-title">
-                        <h4>Testimonials</h4>
-                    </div>
+                   
                     <div class="testimonial-carousel owl-carousel">
                         <div class="single-testimonial-item ">
-                            <div class="testimonial-content d-flex">
-                                <i class="fas fa-quote-left"></i>
-                                <p> Nullam faucibus, magna non fringilla ullamcorper, mi libero tempus arcu, fermentum lacinia sapien lacus eget dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam tincidunt odio dolor</p>
-                            </div>
-                            <div class="author-details d-flex">
-                                <div class="author-img">
-                                    <img src="<?php echo base_url()?>assets/img/user_01.png" alt="">
-                                </div>
-                                <div class="author-content">
-                                   <a href="#">Michael Green</a>
-                                   <span>Product Manager</span>
-                                </div>
-                            </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31909.841988448872!2d99.28980946540834!3d1.3381343375379622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5d7dbf26999499f2!2sBadan%20Keuangan%20Daerah%20Kota%20Padangsidimpuan!5e0!3m2!1sid!2sid!4v1622555207371!5m2!1sid!2sid" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
-                        <div class="single-testimonial-item ">
-                            <div class="testimonial-content d-flex">
-                                <i class="fas fa-quote-left"></i>
-                                <p> Nullam faucibus, magna non fringilla ullamcorper, mi libero tempus arcu, fermentum lacinia sapien lacus eget dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam tincidunt odio dolor</p>
-                            </div>
-                            <div class="author-details d-flex">
-                                <div class="author-img">
-                                    <img src="<?php echo base_url()?>assets/img/user_02.png" alt="">
-                                </div>
-                                <div class="author-content">
-                                   <a href="#">Michael Green</a>
-                                   <span>Product Manager</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-testimonial-item ">
-                            <div class="testimonial-content d-flex">
-                                <i class="fas fa-quote-left"></i>
-                                <p> Nullam faucibus, magna non fringilla ullamcorper, mi libero tempus arcu, fermentum lacinia sapien lacus eget dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam tincidunt odio dolor</p>
-                            </div>
-                            <div class="author-details d-flex">
-                                <div class="author-img">
-                                    <img src="<?php echo base_url()?>assets/img/user_03.png" alt="">
-                                </div>
-                                <div class="author-content">
-                                   <a href="#">Michael Green</a>
-                                   <span>Product Manager</span>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
