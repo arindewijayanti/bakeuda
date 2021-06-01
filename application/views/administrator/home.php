@@ -60,7 +60,7 @@
                             <nav class="menu-wrapper">
                             <ul class="main-menu">
                                 <b><li class="active"><a href="#">Beranda</a></li></b>
-                                <b><li><a href="#feature">Tentang Kami</a></li></b>
+                                <b><li><a href="#feature">Tentang Bakeuda</a></li></b>
                                 <b><li><a href="#blog">Download</a></li></b>
                                 <b><li><a href="#contact-us">Situs Terkait</a></li></b>
                                 <b><li><a href="<?php echo base_url('administrator/logout'); ?>">Logout</a></li></b>
@@ -94,44 +94,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-bemax-item d-flex">
                         <div class="item-icon">
-                           <a href="#"> <i class="fas fa-desktop"></i></a>
+                           <a href="#"> <i class="fas fa-pencil-alt"></i></a>
                         </div>
                         <div class="item-content">
-                            <h6><a href="#">Responsive Design</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-bemax-item d-flex">
-                        <div class="item-icon">
-                            <a href="#"><i class="far fa-gem"></i></a>
-                        </div>
-                        <div class="item-content">
-                            <h6><a href="#">Very Easy Customize</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-bemax-item d-flex">
-                        <div class="item-icon">
-                            <a href="#"><i class="fas fa-bullhorn"></i></a>
-                        </div>
-                        <div class="item-content">
-                            <h6><a href="#">Free Font Icons</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-bemax-item d-flex">
-                        <div class="item-icon">
-                            <a href="#"><i class="fas fa-tablet-alt"></i></a>
-                        </div>
-                        <div class="item-content">
-                            <h6><a href="#">Mobile Ready</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
+                            <h6><a href="#">Slide Gambar Utama</a></h6>
+                            <p>Pengaturan 3 Slide Gambar Utama</p>
                         </div>
                     </div>
                 </div>
@@ -141,19 +108,85 @@
                             <a href="#"><i class="fas fa-pencil-alt"></i></a>
                         </div>
                         <div class="item-content">
-                            <h6><a href="#">Modern Style</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
+                            <h6><a href="#">Gambar Bangunan Bakeuda</a></h6>
+                            <p>Pengaturan 3 Gambar Bangunan Bakeuda</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-bemax-item d-flex">
                         <div class="item-icon">
-                            <a href="#"><i class="fas fa-comments"></i></a>
+                            <a href="#"><i class="fas fa-pencil-alt"></i></a>
                         </div>
                         <div class="item-content">
-                            <h6><a href="#">Awesome Support</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
+                            <h6><a href="#">Slide Galeri</a></h6>
+                            <p>Pengaturan Slide Galeri</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">Link Video Youtube</a></h6>
+                            <p>Pengaturan Link Video Youtube</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">Profil Kepala Dinas</a></h6>
+                            <p>Pengaturan Profil Kepala Dinas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">Berita</a></h6>
+                            <p>Pengaturan Berita</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">Situs Terkait</a></h6>
+                            <p>Pengaturan Situs Terkait</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">File Download</a></h6>
+                            <p>Pengaturan File Download</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">Tentang Bakeuda</a></h6>
+                            <p>Pengaturan Tentang Bakeuda, Visi Misi, Struktur Organisasi dan lain lain</p>
                         </div>
                     </div>
                 </div>

@@ -61,7 +61,7 @@
                             <nav class="menu-wrapper">
                             <ul class="main-menu">
                                 <b><li class="active"><a href="#">Beranda</a></li></b>
-                                <b><li><a href="#feature">Tentang Kami</a></li></b>
+                                <b><li><a href="#feature">Tentang Bakeuda</a></li></b>
                                 <b><li><a href="#blog">Download</a></li></b>
                                 <b><li><a href="#contact-us">Situs Terkait</a></li></b>
                             </ul>
@@ -145,87 +145,6 @@
         </div>
     </div>
     <!-- End Icon Box Area -->
-    <!-- Start We are Bemax Area -->
-    <div class="bemax-area gray-bg pt-65 pb-25">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-70">
-                    <div class="section-title">
-                        <h4>We are Be-One</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-bemax-item d-flex">
-                        <div class="item-icon">
-                           <a href="#"> <i class="fas fa-desktop"></i></a>
-                        </div>
-                        <div class="item-content">
-                            <h6><a href="#">Responsive Design</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-bemax-item d-flex">
-                        <div class="item-icon">
-                            <a href="#"><i class="far fa-gem"></i></a>
-                        </div>
-                        <div class="item-content">
-                            <h6><a href="#">Very Easy Customize</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-bemax-item d-flex">
-                        <div class="item-icon">
-                            <a href="#"><i class="fas fa-bullhorn"></i></a>
-                        </div>
-                        <div class="item-content">
-                            <h6><a href="#">Free Font Icons</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-bemax-item d-flex">
-                        <div class="item-icon">
-                            <a href="#"><i class="fas fa-tablet-alt"></i></a>
-                        </div>
-                        <div class="item-content">
-                            <h6><a href="#">Mobile Ready</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-bemax-item d-flex">
-                        <div class="item-icon">
-                            <a href="#"><i class="fas fa-pencil-alt"></i></a>
-                        </div>
-                        <div class="item-content">
-                            <h6><a href="#">Modern Style</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-bemax-item d-flex">
-                        <div class="item-icon">
-                            <a href="#"><i class="fas fa-comments"></i></a>
-                        </div>
-                        <div class="item-content">
-                            <h6><a href="#">Awesome Support</a></h6>
-                            <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End We are Bemax Area -->
     <!-- Start Latest Project Area -->
     <div class="latest-project-area black-bg pt-70 pb-70" id="portfolio">
         <div class="container">
@@ -328,7 +247,7 @@
                 <div class="col-md-6 col-12 text-center d-flex align-items-center">
                     <div class="hire-us-content">
                         <div class="section-title">
-                            <h4>Working With Us</h4>
+                            <h4>SULAIMAN LUBIS, S.E</h4>
                         </div>
                         <p>We’ve completed more than <span>100+</span>project for our am azing clients, If you interested?</p>
                         <a href="#" class="btn hire-us-btn">Struktur Organisasi</a>
@@ -547,7 +466,7 @@
                         </div>
                         <ul class="footer-menu">
                             <li><a href="#">Beranda</a></li>
-                            <li><a href="#">Tentang Kami </a></li>
+                            <li><a href="#">Tentang Bakeuda </a></li>
                             <li><a href="#">Download</a></li>
                             <li><a href="#">Situs Terkait</a></li>
                         </ul>
