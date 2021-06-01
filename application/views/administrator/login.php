@@ -26,12 +26,12 @@
 		      		<span class="fa fa-user-o"></span>
 		      	</div>
 		      	<h3 class="text-center mb-4">Administrator</h3>
-						<form action="#" class="login-form">
+						<form action="<?php echo base_url('administrator/action_login'); ?>" class="login-form"  method="post">
 		      		<div class="form-group">
-		      			<input type="text" class="form-control rounded-left" placeholder="Username" required>
+		      			<input type="text" class="form-control rounded-left" placeholder="Username" name="username" required>
 		      		</div>
 	            <div class="form-group d-flex">
-	              <input type="password" class="form-control rounded-left" placeholder="Password" required>
+	              <input type="password" class="form-control rounded-left" placeholder="Password" name="password" required>
 	            </div>
 	          
 	            <div class="form-group">
@@ -44,7 +44,7 @@
 		</div>
 	</section>
 
-	<script src="<?php echo base_url('assetslogin/')?>js/jquery.min.js"></script>
+  <script src="<?php echo base_url('assetslogin/')?>js/jquery.min.js"></script>
   <script src="<?php echo base_url('assetslogin/')?>js/popper.js"></script>
   <script src="<?php echo base_url('assetslogin/')?>js/bootstrap.min.js"></script>
   <script src="<?php echo base_url('assetslogin/')?>js/main.js"></script>

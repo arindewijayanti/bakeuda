@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,127 +9,93 @@
 
 
 <!-- Title -->
-<title>Be-one</title>
+<title>Website Resmi Badan Keuangan Daerah Kota Padangsidimpuan</title>
 
 <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url()?>assets/img/favicon.ico">
 
 
 <!-- CSS Here -->
    <!-- MagnificPopup.css -->
-   <link rel="stylesheet" href="assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/magnific-popup.css">
    <!-- SlickNav.css -->
-   <link rel="stylesheet" href="assets/css/slicknav.min.css">
+   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/slicknav.min.css">
    <!-- Owl.carousel.css -->
-   <link rel="stylesheet" href="assets/css/owl.carousel-2.3.4.min.css">
+   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel-2.3.4.min.css">
    <!-- Fontawesome.css -->
-   <link rel="stylesheet" href="assets/css/fontawesome-free-5.12.0.min.css">
+   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/fontawesome-free-5.12.0.min.css">
    <!-- Bootstrap.css -->
-   <link rel="stylesheet" href="assets/css/bootstrap-4.3.1.min.css">
+   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap-4.3.1.min.css">
    <!-- Default.css -->
-   <link rel="stylesheet" href="assets/css/default.css">
+   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/default.css">
    <!-- Style.css -->
-   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
    <!-- Responsive.css -->
-   <link rel="stylesheet" href="assets/css/responsive.css">
+   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/responsive.css">
 
    <!-- ColorNip.css -->
-   <link rel="stylesheet" href="assets/css/colornip.min.css">
-   <link id="theme" rel="stylesheet" href="assets/css/theme-colors/theme-default.css">
+   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/colornip.min.css">
+   <link id="theme" rel="stylesheet" href="<?php echo base_url()?>assets/css/theme-colors/theme-default.css">
 
 
    <!-- Jquery -->
-   <script src="assets/js/jquery-3.4.1.min.js"></script>
+   <script src="<?php echo base_url()?>assets/js/jquery-3.4.1.min.js"></script>
 
 </head>
-<body>
-    <!-- Color Nip -->
-    <div class="Switcher">
-    <button id="Switcher__control" class="Switcher__control">
-        <i class="fas fa-cogs"></i>
-    </button>
-    <h5 style="margin-bottom: 5px">Change Color</h5>
-    <ul id="colors" data-dir="assets/css/theme-colors/">
-        <li data-scheme="theme-default" data-color="#4272d7" style="background-color:#4272d7"></li>
-        <li data-scheme="theme-red" data-color="#fa4251" style="background-color:#fa4251"></li>
-        <li data-scheme="theme-green" data-color="#63c76a" style="background-color:#63c76a"></li>
-        <li data-scheme="theme-yellow" data-color="#ffe048" style="background-color:#ffe048"></li>
-        <li data-scheme="theme-orange" data-color="#f39c12" style="background-color:#f39c12"></li>
-    </ul>
-    </div>
-    <!-- End Color Nip -->
-    <div class="search-overlay"></div>
-    <!-- Search Modal -->
-    <div class="modal fade" id="search-modal">
-        <div class="modal-dialog">
-             <div class="modal-content">
-                 <form action="index.html" class="search-popup-wrapper">
-                     <input type="search" placeholder="Search here...">
-                     <i class="fas fa-search"></i>
-                 </form>
-             </div>
-         </div>
-     </div>
-     <!-- End Search Modal -->
+<body>  
     <!-- Start Header Area -->
-    <div class="header-area">
+    <div>
         <div class="container">
             <div class="header-wrapper">
                 <div class="row">
-                    <div class="col-lg-3 col-6">
-                        <div class="site-logo">
-							<h2>BE-ONE</h2>
-                            <a data-toggle="tooltip" title="Be-one" href="index.html"></a>
-                        </div>
+                    <div class="col-lg-14 col-14">
+                            <br>
+                            <table>
+                            <tr>
+                            <td><img src="<?php echo base_url('assets/')?>logo.jpg" alt="" width="100"></td>
+                            <td>
+                            <h4>&nbsp PEMERINTAH KOTA PADANGSIDIMPUAN</h4>
+                            <h4>&nbsp BADAN KEUANGAN DAERAH</h4>
+                            </td>
+                            <td>
+                            <nav class="menu-wrapper">
+                            <ul class="main-menu">
+                                <b><li class="active"><a href="#">Beranda</a></li></b>
+                                <b><li><a href="#feature">Tentang Kami</a></li></b>
+                                <b><li><a href="#blog">Download</a></li></b>
+                                <b><li><a href="#contact-us">Situs Terkait</a></li></b>
+                            </ul>
+                            </nav>
+                            </td>
+                            <tr>
+                            </table>
                     </div>
                     <div class="col-6 d-lg-none static text-right">
                         <div class="show-mobile-menu"></div>
-                    </div>
-                    <div class="col-lg-9 text-right d-none d-lg-block">
-                        <nav class="menu-wrapper">
-                            <ul class="main-menu" id="mobile-menu">
-                                <li class="active"><a href="#">Home</a></li>
-                                <li><a href="<?php echo base_url('profil')?>">Profil</a></li>
-                                <li><a href="#portfolio">Portfolio</a></li>
-                                <li><a href="#page">Pages</a></li>
-                                <li><a href="#blog">Blog</a></li>
-                                <li><a href="#contact-us">Contact Us</a></li>
-                                <li class="search-trigger d-none d-lg-inline-block"><a href="javascript:void(0)"><i class="fas fa-search"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Header Area -->
+    <br>
     <!-- Start Slider Area -->
     <div class="slider-area ">
         <div class="container-fluid p-0">
             <div class="row no-gutters">
                 <div class="col-12">
                     <div class="slider-carousel owl-carousel">
-                        <div class="single-slider slider-bg-1 text-center">
+                        <div class="single-slider  text-center">
                             <div class="slider-inner">
-                                <h1>WELCOME TO BE-ONE</h1>
-                                ><h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociic</h5>
-                                <a class="btn get-started-btn" href="#">Get Started</a>
-                            </div>
+                                 </div>
                         </div>
                         <div class="single-slider slider-bg-2 text-center">
                             <div class="slider-inner">
-                                <h1>Free MULTIPURPSE TEMPLATE</h1>
-								<h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n</h5
->                                <a class="btn get-started-btn" href="#">Get Started</a>
-                            </div>
+                                 </div>
                         </div>
                         <div class="single-slider slider-bg-3 text-center">
                             <div class="slider-inner">
-                                <h1>WE PROMOTE YOUR BUSINESS</h1>
-								<h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n</h5>
-                                <a class="btn get-started-btn" href="#">Get Started</a>
-                            </div>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -136,22 +103,7 @@
         </div>
     </div>
     <!-- End Slider Area -->
-    <!-- Start Hire Us Area -->
-    <div class="hire-us-area theme-bg js--sticky-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-9 col-12">
-                    <div class="hire-us-content">
-                        <h6>We’ve completed more than <span>100+</span> project for our amazing clients, If you interested?</h6> 
-                    </div>  
-                </div>
-                <div class="col-lg-3 col-md-3  offset-lg-2 col-12 text-right">
-                    <a class="btn hire-us-button" href="#">Hire Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Hire Us Area -->
+    
     <!-- Start Icon Box Area -->
     <div class="icon-box-area pt-70 pb-70" id="feature">
         <div class="container">
@@ -280,7 +232,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center mb-70">
                     <div class="section-title">
-                        <h4>Latest Projects</h4>
+                        <h4>Galeri</h4>
                     </div>
                 </div>
             </div>
@@ -341,7 +293,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center mb-70">
                     <div class="section-title">
-                        <h4>Why Choose Us</h4>
+                        <h4>Video</h4>
                     </div>
                 </div>
             </div>
@@ -379,12 +331,12 @@
                             <h4>Working With Us</h4>
                         </div>
                         <p>We’ve completed more than <span>100+</span>project for our am azing clients, If you interested?</p>
-                        <a href="#" class="btn hire-us-btn">Hire Us</a>
+                        <a href="#" class="btn hire-us-btn">Struktur Organisasi</a>
                     </div>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
                     <div class="hire-us-img">
-                        <img src="assets/img/hire_us.png" alt="">
+                        <img src="<?php echo base_url()?>assets/img/hire_us.png" alt="">
                     </div>
                 </div>
             </div>
@@ -397,12 +349,12 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-title">
-                        <h4>Latest blog Posts</h4>
+                        <h4>Berita Terbaru</h4>
                     </div>
                     <div class="blog-carousel owl-carousel">
                         <div class="single-blog-item">
                             <div class="single-blog-img">
-                                <img src="assets/img/blog_01.jpg" alt="">
+                                <img src="<?php echo base_url()?>assets/img/blog_01.jpg" alt="">
                                 <span>October 25, 2017</span>
                             </div>
                             <div class="blog-content">
@@ -420,7 +372,7 @@
                         </div>
                         <div class="single-blog-item">
                             <div class="single-blog-img">
-                                <img src="assets/img/blog_02.jpg" alt="">
+                                <img src="<?php echo base_url()?>assets/img/blog_02.jpg" alt="">
                                 <span>October 25, 2017</span>
                             </div>
                             <div class="blog-content">
@@ -438,7 +390,7 @@
                         </div>
                         <div class="single-blog-item">
                             <div class="single-blog-img">
-                                <img src="assets/img/blog_03.jpg" alt="">
+                                <img src="<?php echo base_url()?>assets/img/blog_03.jpg" alt="">
                                 <span>October 25, 2017</span>
                             </div>
                             <div class="blog-content">
@@ -456,7 +408,7 @@
                         </div>
                         <div class="single-blog-item">
                             <div class="single-blog-img">
-                                <img src="assets/img/blog_04.jpg" alt="">
+                                <img src="<?php echo base_url()?>assets/img/blog_04.jpg" alt="">
                                 <span>October 25, 2017</span>
                             </div>
                             <div class="blog-content">
@@ -486,7 +438,7 @@
                             </div>
                             <div class="author-details d-flex">
                                 <div class="author-img">
-                                    <img src="assets/img/user_01.png" alt="">
+                                    <img src="<?php echo base_url()?>assets/img/user_01.png" alt="">
                                 </div>
                                 <div class="author-content">
                                    <a href="#">Michael Green</a>
@@ -501,7 +453,7 @@
                             </div>
                             <div class="author-details d-flex">
                                 <div class="author-img">
-                                    <img src="assets/img/user_02.png" alt="">
+                                    <img src="<?php echo base_url()?>assets/img/user_02.png" alt="">
                                 </div>
                                 <div class="author-content">
                                    <a href="#">Michael Green</a>
@@ -516,7 +468,7 @@
                             </div>
                             <div class="author-details d-flex">
                                 <div class="author-img">
-                                    <img src="assets/img/user_03.png" alt="">
+                                    <img src="<?php echo base_url()?>assets/img/user_03.png" alt="">
                                 </div>
                                 <div class="author-content">
                                    <a href="#">Michael Green</a>
@@ -536,32 +488,32 @@
             <div class="brand-carousel owl-carousel">
                 <div class="brand-item">
                     <div class="brand-item-inner">
-                        <a href="#"><img src="assets/img/brands/1.png" alt=""></a>
+                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/1.png" alt=""></a>
                     </div>
                 </div>
                 <div class="brand-item">
                     <div class="brand-item-inner">
-                        <a href="#"><img src="assets/img/brands/2.png" alt=""></a>
+                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/2.png" alt=""></a>
                     </div>
                 </div>
                 <div class="brand-item">
                     <div class="brand-item-inner">
-                        <a href="#"><img src="assets/img/brands/3.png" alt=""></a>
+                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/3.png" alt=""></a>
                     </div>
                 </div>
                 <div class="brand-item">
                     <div class="brand-item-inner">
-                        <a href="#"><img src="assets/img/brands/4.png" alt=""></a>
+                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/4.png" alt=""></a>
                     </div>
                 </div>
                 <div class="brand-item">
                     <div class="brand-item-inner">
-                        <a href="#"><img src="assets/img/brands/5.png" alt=""></a>
+                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/5.png" alt=""></a>
                     </div>
                 </div>
                 <div class="brand-item">
                     <div class="brand-item-inner">
-                        <a href="#"><img src="assets/img/brands/6.png" alt=""></a>
+                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/6.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -575,10 +527,10 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a href="index.html">Be-One </a>
+                            <a href="index.html">BAKEUDA </a>
                         </div>
                         <div class="footer-dec">
-                            <p>Be-one is a clean PSD theme suitable for corporate, You can customize it very easy to fit your needs, semper suscipit metus accumsan at. Nam luctus ac tortor eu</p>
+                            <p>Situs Resmi Badan Keuangan Daerah </BR>Kota Padangsidimpuan</p>
                         </div>
                         <ul class="social-links">
                             <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -591,44 +543,30 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <div class="widget-title">
-                            <h6>Features</h6>
+                            <h6>Menu</h6>
                         </div>
                         <ul class="footer-menu">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our Story</a></li>
-                            <li><a href="#">Terms &and; Condition</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Beranda</a></li>
+                            <li><a href="#">Tentang Kami </a></li>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Situs Terkait</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <div class="widget-title">
-                            <h6>Contact us</h6>
+                            <h6>Kontak Kami</h6>
                         </div>
                         <div class="address-line">
-                            <p>Address: 379 5th Ave  New York, NYC 10018, United States</p>
-                            <p>Phone: <a href="tel:+112345 6999">+(112) 345 6999</a></p>
-                            <p>Fax: +(112) 345 8999</p>
-                            <p>Email: <a href="mailto:contact@be-one.com">contact@be-one.com</a></p>
+                            <p>Alamat: Jln. Jen. Dr. Abd.Haris Nasution Pal - IV Pijorkoling</p>
+                            <p>Telepon: (0634)27075</a></p>
+                            <p>Fax: (0634) 27075</p>
+                            <p>Email: <a href="mailto:contact@be-one.com">bakeudasidimpuan@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <div class="widget-title">
-                            <h6>Newsletter</h6>
-                        </div>
-                        <div class="newsletter-text">
-                            <p>Subscribe to Newsletters and Stay informed about our news and events</p>
-                        </div>
-                        <form action="index.html" class="newsletter-form">
-                            <input type="email" placeholder="Your email">
-                            <input class="btn newsletter-btn" type="submit" value="Subscribe">
-                        </form>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </footer>
@@ -639,7 +577,7 @@
             <div class="row ">
                 <div class="col-12 text-center">
                     <div class="copyright-area ">
-                        <p>Copyright © 2021 Designed by <a href="https://www.wpfreecloud.com">wpfreecloud.com</a>. All rights reserved.</p>
+                        <p>Copyright © 2021 Badan Keuangan Daerah Kota Padangsidimpuan</p>
                     </div>
                 </div>
             </div>
@@ -648,26 +586,26 @@
     <!-- End Copyright Area -->
 <!-- JS -->
    <!-- Popper.js -->
-   <script src="assets/js/popper.min.js"></script>
+   <script src="<?php echo base_url()?>assets/js/popper.min.js"></script>
    <!-- Bootstrap.js -->
-   <script src="assets/js/bootstrap-4.3.1.min.js"></script>
+   <script src="<?php echo base_url()?>assets/js/bootstrap-4.3.1.min.js"></script>
    <!-- Modernizr.js -->
-   <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+   <script src="<?php echo base_url()?>assets/js/vendor/modernizr-3.5.0.min.js"></script>
    <!-- Owl.Carousel.js -->
-   <script src="assets/js/vendor/owl.carousel-2.3.4.min.js"></script>
-   <script src="assets/js/vendor/owl.carousel2.thumbs.min.js"></script>
+   <script src="<?php echo base_url()?>assets/js/vendor/owl.carousel-2.3.4.min.js"></script>
+   <script src="<?php echo base_url()?>assets/js/vendor/owl.carousel2.thumbs.min.js"></script>
    <!-- Waypoints.js -->
-   <script src="assets/js/vendor/waypoints-4.0.1.min.js"></script>
+   <script src="<?php echo base_url()?>assets/js/vendor/waypoints-4.0.1.min.js"></script>
    <!-- ColorNip.js -->
-   <script src="assets/js/vendor/colornip.min.js"></script>
+   <script src="<?php echo base_url()?>assets/js/vendor/colornip.min.js"></script>
    <!-- SlickNav.js -->
-   <script src="assets/js/vendor/slicknav.min.js"></script>
+   <script src="<?php echo base_url()?>assets/js/vendor/slicknav.min.js"></script>
    <!-- ScrollUp.js -->
-   <script src="assets/js/vendor/jquery.scrollUp.min.js"></script>
+   <script src="<?php echo base_url()?>assets/js/vendor/jquery.scrollUp.min.js"></script>
    <!-- MagnificPopup.js -->
-   <script src="assets/js/vendor/magnific-popup.min.js"></script>
+   <script src="<?php echo base_url()?>assets/js/vendor/magnific-popup.min.js"></script>
 
    <!-- Main.js -->
-   <script src="assets/js/main.js"></script>
+   <script src="<?php echo base_url()?>assets/js/main.js"></script>
 </body>
 </html>
