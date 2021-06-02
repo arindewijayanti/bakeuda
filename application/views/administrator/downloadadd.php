@@ -1,5 +1,5 @@
 <?php 
-$this->load->view('include/header'); 
+$this->load->view('administrator/header'); 
 ?>
 <BR>
     
@@ -21,34 +21,22 @@ $this->load->view('include/header');
           <div class="table-responsive">
              <div class="container">
 
-        <form action="<?php echo base_url('administrator/action_menambahfiledownload')?>" method="post" enctype="multipart/form-data">
-              <div class="form-group">
-              <div class="form-row">
-              
-                           
-                  
-                  <div class="col-md-6">
-                    <label for="nama_file">Nama File</label>
-                    <input class="form-control" id="nama_file" type="text" aria-describedby="nameHelp" name="nama_file" required/>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="upload_file">Upload File</label>
-                    <input class="form-control" id="upload_file" type="text" aria-describedby="nameHelp" name="upload_file" required/>
-                  </div>
-                  
-                </div>
-              </div>
-
-
-                         <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-2">
-                <input class="form-control btn btn-primary" type="submit" value="Simpan" name="btnSimpan" >
-              </div>
-            </div>
-          </div>
-          </form>
+             <?php 
+        if(isset($error))
+        {
+            echo "ERROR UPLOAD : <br/>";
+            print_r($error);
+            echo "<hr/>";
+        }
+        ?>
+     <form method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>administrator/action_downloadadd">
+            <div>Berkas : </div>
+        	<div><input type="file" name="berkas"></div>
+            <div>Keterangan : </div>
+            <div><textarea name="keterangan_berkas"></textarea></div>
+            <div><input type="submit" value="Simpan"/></div>
+        </form>
+    
         </div>
 </div>
 </div>
@@ -59,6 +47,7 @@ $this->load->view('include/header');
 
 </div>
     </section>
-<?php
-$this->load->view('include/footer'); 
+
+<?php 
+$this->load->view('administrator/footer'); 
 ?>

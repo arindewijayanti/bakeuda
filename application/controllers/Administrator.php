@@ -7,6 +7,7 @@ class Administrator extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->helper('form');
+		$this->load->library('form_validation');
 		$this->load->model('model_login');
 		$this->load->model('model_download');
 		$this->load->library('session');
@@ -67,27 +68,34 @@ class Administrator extends CI_Controller {
 
 	public function action_downloadadd()
 	{
-		$config['upload_path'] = './upload_download/';
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = 2000;
- 
- 
-        $this->load->library('upload', $config);
- 
-        if (!$this->upload->do_upload('profile_pic')) 
-        {
-            $error = array('error' => $this->upload->display_errors());
- 
-            $this->load->view('imageupload_form', $error);
-        } 
-        else 
-        {
-            $data = array('image_metadata' => $this->upload->data());
- 
-            $this->load->view('imageupload_success', $data);
-        }
+		$config['upload_path']          = './uploads/';
+		$config['allowed_types']        = 'gif|jpg|jepg|png|pdf';
+		$config['encrypt_name']			= TRUE;
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		if ( ! $this->upload->do_upload('berkas'))
+		{
+				$error = array('error' => $this->upload->display_errors());
+				$this->load->view('administrator/downloadadd', $error);
+		}
+		else
+		{
+			$data['nama_berkas'] = $this->upload->data("file_name");
+			$data['keterangan_berkas'] = $this->input->post('keterangan_berkas');
+			$this->db->insert('tbl_download',$data);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
+			redirect('administrator/download');
+		}
+
+		
 	}
 
+	public function action_deletedownload($id_download = '')
+	{
+			$this->model_download->deletedownload($id_download);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil dihapus</div>');
+			redirect('administrator/download','refresh');
+	}
 	
 
 

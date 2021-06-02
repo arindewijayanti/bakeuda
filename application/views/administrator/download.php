@@ -1,5 +1,5 @@
 <?php 
-$this->load->view('include/header'); 
+$this->load->view('administrator/header'); 
 ?>
 <BR>
     
@@ -38,10 +38,9 @@ $this->load->view('include/header');
                   $i = 1;
                   foreach ($content->result() as $data) : ?>
                   <td><?= $i ?></td>
-                  <td><?= $data->nama_file ?></td>
+                  <td align="left"><?= $data->keterangan_berkas ?></td>
                   <td> 
-                    <a href="<?php echo base_url()?>download/updatedatadownload/<?php echo $data->id_download; ?>" class="btn btn-warning" style="margin-bottom: 1px;">Edit<i class="fa fa-tag"></i></a>
-                    <a href="<?php echo base_url()?>download/action_deletedatadownload/<?php echo $data->id_download; ?>" onclick="return confirm('Apakah anda yakin?');" class="btn btn-danger">Hapus<i class="fa fa-trash"></i></a>
+                    <a href="<?php echo base_url()?>administrator/action_deletedownload/<?php echo $data->id_download; ?>" onclick="return confirm('Apakah anda yakin?');" class="btn btn-danger">Hapus<i class="fa fa-trash"></i></a>
                   </td> 
                 </tr>
                     <?php
@@ -56,6 +55,7 @@ $this->load->view('include/header');
       </div>
     </div>
   </div>
-<?php
-$this->load->view('include/footer'); 
+
+<?php 
+$this->load->view('administrator/footer'); 
 ?>
