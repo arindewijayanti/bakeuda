@@ -20,7 +20,7 @@ $this->load->view('administrator/header');
                            <a href="#"> <i class="fas fa-pencil-alt"></i></a>
                         </div>
                         <div class="item-content">
-                            <h6><a href="#">Slide Gambar Utama</a></h6>
+                            <h6><a href="<?php echo base_url('administrator/slidegambarutama')?>">Slide Gambar Utama</a></h6>
                             <p>Pengaturan 3 Slide Gambar Utama</p>
                         </div>
                     </div>

@@ -2,6 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->helper('url');
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+		$this->load->model('model_login');
+		$this->load->model('model_download');
+		$this->load->library('session');
+	}
 
 	/**
 	 * Index Page for this controller.
@@ -30,6 +40,13 @@ class Welcome extends CI_Controller {
 
 	public function download()
 	{
-		$this->load->view('download');
+        $data['content'] = $this->model_download->Tampildownload();
+		$this->load->view('download',$data);
+	}
+
+	function action_download($id_download)
+	{
+		$data = $this->db->get_where('tbl_download',['id_download'=>$id_download])->row();
+		force_download('uploads/'.$data->nama_berkas,NULL);
 	}
 }

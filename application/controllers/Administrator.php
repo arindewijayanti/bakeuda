@@ -10,6 +10,7 @@ class Administrator extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->model('model_login');
 		$this->load->model('model_download');
+		$this->load->model('model_slidegambarutama');
 		$this->load->library('session');
 	}
 
@@ -86,8 +87,6 @@ class Administrator extends CI_Controller {
 			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
 			redirect('administrator/download');
 		}
-
-		
 	}
 
 	public function action_deletedownload($id_download = '')
@@ -96,6 +95,39 @@ class Administrator extends CI_Controller {
 			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil dihapus</div>');
 			redirect('administrator/download','refresh');
 	}
+
+	public function slidegambarutama()
+	{
+        $data['content'] = $this->model_slidegambarutama->Tampilslidegambarutama();
+		$this->load->view('administrator/slidegambarutama',$data);
+	}
+
+	public function slidegambarutamaadd()
+	{
+        $this->load->view('administrator/slidegambarutamaadd');
+	}
+
+	public function action_slidegambarutamaadd()
+	{
+		$config['upload_path']          = './uploads/';
+		$config['allowed_types']        = 'gif|jpg|jepg|png|pdf';
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		if ( ! $this->upload->do_upload('berkas'))
+		{
+				$error = array('error' => $this->upload->display_errors());
+				$this->load->view('administrator/slidegambarutamaadd', $error);
+		}
+		else
+		{
+			$data['nama_berkas'] = $this->upload->data("file_name");
+			$data['keterangan_berkas'] = $this->input->post('keterangan_berkas');
+			$this->db->insert('tbl_slidegambarutama',$data);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
+			redirect('administrator/slidegambarutama');
+		}
+	}
+
 	
 
 

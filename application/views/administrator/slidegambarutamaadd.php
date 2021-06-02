@@ -16,7 +16,7 @@ $this->load->view('administrator/header');
 <!-- Example DataTables Card-->
 <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-plus"></i> Menambah Daftar File Download</div>
+          <i class="fa fa-plus"></i> Menambah Daftar File Download (1366x600px)</div>
         <div class="card-body">
           <div class="table-responsive">
              <div class="container">
@@ -30,7 +30,7 @@ $this->load->view('administrator/header');
         }
         ?>
      <form method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>administrator/action_downloadadd">
-            <div>Berkas : </div>
+          <div>Berkas : </div>
         	<div><input type="file" name="berkas"></div>
             <div>Keterangan : </div>
             <div><textarea name="keterangan_berkas"></textarea></div>

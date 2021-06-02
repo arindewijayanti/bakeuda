@@ -8,7 +8,7 @@ $this->load->view('include/header');
             <div class="row no-gutters">
                 <div class="col-12">
                     <div class="slider-carousel owl-carousel">
-                        <div class="single-slider  text-center">
+                        <div class="single-slider slider-bg-1 text-center">
                             <div class="slider-inner">
                                  </div>
                         </div>

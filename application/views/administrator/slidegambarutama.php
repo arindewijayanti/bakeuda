@@ -1,38 +1,33 @@
 <?php 
-$this->load->view('include/header'); 
+$this->load->view('administrator/header'); 
 ?>
 <BR>
-    <!-- Start Latest Project Area -->
-<div class="latest-project-area black-bg pt-30">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-title">
-                        <h4>DOWNLOAD</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Latest Project Area -->
-    <BR>
     
-    <section id_download="services" class="services">
+    <section id_slidegambarutama="services" class="services">
+      <div class="container">
+      <ol class="breadcrumb" >
+        <li class="breadcrumb-item">
+          <a href="<?php echo base_url('administrator/home')?>">Beranda</a>
+        </li>
+
+        <li class="breadcrumb-item active">Daftar File Slide Gambar Utama</li>
+      </ol>
 
       <div class="container">
+     
   <!-- Example DataTables Card-->
   <div class="card mb-3">
         <div class="card-header">
         <?php echo $this->session->flashdata('msg'); ?>
-          <i class="fa fa-table"></i> Daftar File Download</div>
+          <i class="fa fa-table"></i> Daftar File Slide Gambar Utama (1366x600px)</div>
         <div class="card-body">
           <div class="table-responsive">
           <table class="table table-bordered" id="example" width="100%" cellspacing="0">
               <thead>
             
                 <tr class="text-center">
-                  <th>No</th>
-                  <th>Nama File</th>    
+                  <th>No</th> 
+                  <th>Gambar</th>    
                   <th>Opsi</th>
                 </tr>
               </thead>
@@ -42,9 +37,9 @@ $this->load->view('include/header');
                   $i = 1;
                   foreach ($content->result() as $data) : ?>
                   <td><?= $i ?></td>
-                  <td align="left"><?= $data->keterangan_berkas ?></td>
-                  <td> 
-                    <a href="<?php echo base_url()?>welcome/action_download/<?php echo $data->id_download; ?>" class="btn btn-danger">Download</i></a>
+                  <td><img width="300" src="<?php echo base_url(); ?>assets/img/<?php echo $data->nama_berkas; ?>"/></td>
+                        <td> 
+                    <a href="<?php echo base_url()?>administrator/action_deleteslidegambarutama/<?php echo $data->id_slidegambarutama; ?>" class="btn btn-danger">Edit</i></a>
                   </td> 
                 </tr>
                     <?php
@@ -60,6 +55,6 @@ $this->load->view('include/header');
     </div>
   </div>
 
-<?php
-$this->load->view('include/footer'); 
+<?php 
+$this->load->view('administrator/footer'); 
 ?>
