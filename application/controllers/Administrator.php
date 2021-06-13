@@ -10,6 +10,7 @@ class Administrator extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->model('model_login');
 		$this->load->model('model_download');
+		$this->load->model('model_bangunanbakeuda');
 		$this->load->model('model_slidegambarutama');
 		$this->load->model('model_video');
 		$this->load->model('model_berita');
@@ -213,6 +214,29 @@ class Administrator extends CI_Controller {
 		
 		$data['content'] = $this->db->get('tbl_video');
 		redirect('administrator/video');
+	}
+
+	public function bangunanbakeuda()
+	{
+        $data['content'] = $this->model_bangunanbakeuda->Tampilbangunanbakeuda();
+		$this->load->view('administrator/bangunanbakeuda',$data);
+	}
+
+	public function bangunanbakeudaedit($id_bangunanbakeuda = NULL)
+	{
+		$this->db->where('id_bangunanbakeuda', $id_bangunanbakeuda);
+		$data['content'] = $this->db->get('tbl_bangunanbakeuda');
+		$this->load->view('administrator/bangunanbakeudaedit', $data);
+	}
+
+	public function action_bangunanbakeudaupdate()
+	{
+			$id = $this->input->post('nama_berkas');
+			$_id = $this->db->get_where('tbl_bangunanbakeuda',['nama_berkas' => $id])->row();
+            $query = $this->db->delete('tbl_bangunanbakeuda',['nama_berkas'=>$id]);
+            if($query){
+                unlink("./assets/img/".$_id->image);
+            }
 	}
 
 	

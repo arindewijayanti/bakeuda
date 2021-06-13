@@ -34,10 +34,9 @@ $this->load->view('include/header');
                 <div class="col-lg-4">
                     <div class="single-icon-box icon-box-img-1">
                         <div class="icon-box-content">
-                            <h6 class="iconbox-content-heading"><i class="far fa-chart-bar"></i> Top Investment Advisors</h6>
+                            <h6 class="iconbox-content-heading"><i class="far fa-chart-bar"></i> <?= $bangunanbakeuda1->judul ?></h6>
                             <div class="iconbox-content-body">
-                                <p>Mauris scelerisque ut ipsum id vulputate. Nulla laoreet, ligula vel congue ultricies, nibh ipsum egestas nunc, id porta nibh nunc non felis. Vestibulum nibh urna, lobortis ut euismod sed, dignissim non neque</p>
-                                <a class="btn btn-inline read-more-btn" href="#"><i class="fas fa-plus-square"></i> Read More</a>
+                                <p><?= $bangunanbakeuda1->keterangan ?></p>
                             </div>
                         </div>
                     </div>
@@ -45,10 +44,9 @@ $this->load->view('include/header');
                 <div class="col-lg-4">
                     <div class="single-icon-box icon-box-img-2">
                         <div class="icon-box-content">
-                            <h6 class="iconbox-content-heading"><i class="fas fa-cogs"></i> Business Performance</h6>
+                            <h6 class="iconbox-content-heading"><i class="fas fa-cogs"></i><?= $bangunanbakeuda2->judul ?></h6>
                             <div class="iconbox-content-body">
-                                <p>Mauris scelerisque ut ipsum id vulputate. Nulla laoreet, ligula vel congue ultricies, nibh ipsum egestas nunc, id porta nibh nunc non felis. Vestibulum nibh urna, lobortis ut euismod sed, dignissim non neque</p>
-                                <a class="btn btn-inline read-more-btn" href="#"><i class="fas fa-plus-square"></i> Read More</a>
+                                <p><?= $bangunanbakeuda2->keterangan ?></p>
                             </div>
                         </div>
                     </div>
@@ -56,10 +54,9 @@ $this->load->view('include/header');
                 <div class="col-lg-4">
                     <div class="single-icon-box icon-box-img-3">
                         <div class="icon-box-content">
-                            <h6 class="iconbox-content-heading"><i class="fas fa-chart-line"></i> Growth Hacking and Success</h6>
+                            <h6 class="iconbox-content-heading"><i class="fas fa-chart-line"></i><?= $bangunanbakeuda3->judul ?></h6>
                             <div class="iconbox-content-body">
-                                <p>Mauris scelerisque ut ipsum id vulputate. Nulla laoreet, ligula vel congue ultricies, nibh ipsum egestas nunc, id porta nibh nunc non felis. Vestibulum nibh urna, lobortis ut euismod sed, dignissim non neque</p>
-                                <a class="btn btn-inline read-more-btn" href="#"><i class="fas fa-plus-square"></i> Read More</a>
+                                <p><?= $bangunanbakeuda3->keterangan ?></p>
                             </div>
                         </div>
                     </div>

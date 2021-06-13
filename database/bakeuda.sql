@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Jun 2021 pada 07.59
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.2.30
+-- Generation Time: Jun 13, 2021 at 10:18 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_akun`
+-- Table structure for table `tbl_akun`
 --
 
 CREATE TABLE `tbl_akun` (
@@ -35,7 +35,7 @@ CREATE TABLE `tbl_akun` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_akun`
+-- Dumping data for table `tbl_akun`
 --
 
 INSERT INTO `tbl_akun` (`username`, `password`, `nama`, `level`) VALUES
@@ -46,7 +46,29 @@ INSERT INTO `tbl_akun` (`username`, `password`, `nama`, `level`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_berita`
+-- Table structure for table `tbl_bangunanbakeuda`
+--
+
+CREATE TABLE `tbl_bangunanbakeuda` (
+  `id_bangunanbakeuda` int(11) NOT NULL,
+  `judul` varchar(128) NOT NULL,
+  `keterangan` varchar(128) NOT NULL,
+  `nama_berkas` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_bangunanbakeuda`
+--
+
+INSERT INTO `tbl_bangunanbakeuda` (`id_bangunanbakeuda`, `judul`, `keterangan`, `nama_berkas`) VALUES
+(1, 'Gambar 1', 'Gambar 1', 'Gambar 1'),
+(2, 'Gambar 2', 'Gambar 2', 'Gambar 2'),
+(3, 'Gambar 3', 'Gambar 3', 'Gambar 3\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_berita`
 --
 
 CREATE TABLE `tbl_berita` (
@@ -56,7 +78,7 @@ CREATE TABLE `tbl_berita` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_berita`
+-- Dumping data for table `tbl_berita`
 --
 
 INSERT INTO `tbl_berita` (`id_strukturorganisasi`, `nama_berkas`, `keterangan_berkas`) VALUES
@@ -65,7 +87,7 @@ INSERT INTO `tbl_berita` (`id_strukturorganisasi`, `nama_berkas`, `keterangan_be
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_download`
+-- Table structure for table `tbl_download`
 --
 
 CREATE TABLE `tbl_download` (
@@ -75,7 +97,7 @@ CREATE TABLE `tbl_download` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_download`
+-- Dumping data for table `tbl_download`
 --
 
 INSERT INTO `tbl_download` (`id_download`, `nama_berkas`, `keterangan_berkas`) VALUES
@@ -86,7 +108,7 @@ INSERT INTO `tbl_download` (`id_download`, `nama_berkas`, `keterangan_berkas`) V
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_slidegambarutama`
+-- Table structure for table `tbl_slidegambarutama`
 --
 
 CREATE TABLE `tbl_slidegambarutama` (
@@ -95,55 +117,102 @@ CREATE TABLE `tbl_slidegambarutama` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_slidegambarutama`
+-- Dumping data for table `tbl_slidegambarutama`
 --
 
 INSERT INTO `tbl_slidegambarutama` (`id_slidegambarutama`, `nama_berkas`) VALUES
 (3, 'slide_03.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_video`
+--
+
+CREATE TABLE `tbl_video` (
+  `id_video` int(128) NOT NULL,
+  `judul` varchar(128) NOT NULL,
+  `keterangan` varchar(128) NOT NULL,
+  `link` varchar(128) NOT NULL,
+  `status` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_video`
+--
+
+INSERT INTO `tbl_video` (`id_video`, `judul`, `keterangan`, `link`, `status`) VALUES
+(1, 'Update Corona Indonesia 11 Juni 2021', 'JAKARTA, KOMPAS.TV  Satuan Tugas Penanganan Covid-19 merilis perkembangan data kasus Covid-19 di Indonesia.', 'https://www.youtube.com/watch?v=sLexonNk16g', 'Utama'),
+(2, 'judul pendukung 1', 'keterangan pendukung 1', 'link pendukung 1', 'Pendukung'),
+(3, 'judul pendukung 2', 'keterangan pendukung 2', 'link pendukung 2', 'Pendukung');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `tbl_berita`
+-- Indexes for table `tbl_bangunanbakeuda`
+--
+ALTER TABLE `tbl_bangunanbakeuda`
+  ADD PRIMARY KEY (`id_bangunanbakeuda`);
+
+--
+-- Indexes for table `tbl_berita`
 --
 ALTER TABLE `tbl_berita`
   ADD PRIMARY KEY (`id_strukturorganisasi`);
 
 --
--- Indeks untuk tabel `tbl_download`
+-- Indexes for table `tbl_download`
 --
 ALTER TABLE `tbl_download`
   ADD PRIMARY KEY (`id_download`);
 
 --
--- Indeks untuk tabel `tbl_slidegambarutama`
+-- Indexes for table `tbl_slidegambarutama`
 --
 ALTER TABLE `tbl_slidegambarutama`
   ADD PRIMARY KEY (`id_slidegambarutama`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- Indexes for table `tbl_video`
+--
+ALTER TABLE `tbl_video`
+  ADD PRIMARY KEY (`id_video`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_berita`
+-- AUTO_INCREMENT for table `tbl_bangunanbakeuda`
+--
+ALTER TABLE `tbl_bangunanbakeuda`
+  MODIFY `id_bangunanbakeuda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_berita`
 --
 ALTER TABLE `tbl_berita`
   MODIFY `id_strukturorganisasi` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_download`
+-- AUTO_INCREMENT for table `tbl_download`
 --
 ALTER TABLE `tbl_download`
   MODIFY `id_download` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_slidegambarutama`
+-- AUTO_INCREMENT for table `tbl_slidegambarutama`
 --
 ALTER TABLE `tbl_slidegambarutama`
   MODIFY `id_slidegambarutama` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `tbl_video`
+--
+ALTER TABLE `tbl_video`
+  MODIFY `id_video` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
