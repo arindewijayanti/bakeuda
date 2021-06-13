@@ -34,7 +34,7 @@ $this->load->view('administrator/header');
                     <input value="<?= $data->judul?>" class="form-control" id="judul" type="text" aria-describedby="nameHelp" name="judul" required/>
                   </div>
                   <div class="col-md-6">
-                    <label for="link">Link</label>
+                    <label for="link">Kode Akhir Link  (youtube.com/watch?v=<b>sLexonNk16g</b>) </label>
                     <input value="<?= $data->link?>" class="form-control" id="link" type="text" aria-describedby="nameHelp" name="link" required/>
                   </div>
                   

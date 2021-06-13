@@ -138,21 +138,21 @@ $this->load->view('include/header');
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="video-img-thumbnail text-center">
-                        <a class="video-play" href="<?= $videoutama->link ?>"><i class="far fa-play-circle"></i></a>
+                    <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $videoutama->link ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="single-choose-item">
-                        <h6><a href="#"><i class="fas fa-cogs"></i><?= $videoutama->judul ?></a></h6>
+                        <h6><a class="video-play" href="https://www.youtube.com/watch?v=<?= $videoutama->link?>"><i class="fas fa-gem"></i><?= $videoutama->judul ?></a></h6>
                         <p><?= $videoutama->keterangan ?></p>
                     </div>
                     <div class="single-choose-item">
-                        <h6><a href="#"><i class="fas fa-gem"></i> <?= $videopendukung1->judul ?> </a></h6>
+                        <h6><a class="video-play" href="https://www.youtube.com/watch?v=<?= $videopendukung1->link?>"><i class="fas fa-gem"></i> <?= $videopendukung1->judul ?> </a></h6>
                         <p><?= $videopendukung1->keterangan ?></p>
                     </div>
                     <div class="single-choose-item">
-                        <h6><a href="#"><i class="fas fa-briefcase"></i> <?= $videopendukung2->judul ?></a></h6>
+                        <h6><a class="video-play" href="https://www.youtube.com/watch?v=<?= $videopendukung2->link?>"><i class="fas fa-gem"></i> <?= $videopendukung2->judul ?></a></h6>
                         <p><?= $videopendukung2->keterangan ?></p>
                     </div>
                 </div>
