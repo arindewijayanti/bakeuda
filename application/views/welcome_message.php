@@ -142,21 +142,21 @@ $this->load->view('include/header');
             <div class="row">
                 <div class="col-lg-6">
                     <div class="video-img-thumbnail text-center">
-                        <a class="video-play" href="https://www.youtube.com/watch?v=SGo1i4BEBL4"><i class="far fa-play-circle"></i></a>
+                        <a class="video-play" href="<?= $videoutama->link ?>"><i class="far fa-play-circle"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="single-choose-item">
-                        <h6><a href="#"><i class="fas fa-cogs"></i> Awesome Design</a></h6>
-                        <p>Morbi vehicula a nibh in commodo. Aliquam quis dolor eget lectus pulvinar malesuada. Suspendisse eu rhoncus ligula.</p>
+                        <h6><a href="#"><i class="fas fa-cogs"></i><?= $videoutama->judul ?></a></h6>
+                        <p><?= $videoutama->keterangan ?></p>
                     </div>
                     <div class="single-choose-item">
-                        <h6><a href="#"><i class="fas fa-gem"></i> Flexible Layouts </a></h6>
-                        <p>Nam orci metus, varius at nisl at, tempor facilisis magna. Ut maximus felis et tincidunt lacinia. Nulla malesuada ipsum at magna condimentum pharetra.</p>
+                        <h6><a href="#"><i class="fas fa-gem"></i> <?= $videopendukung1->judul ?> </a></h6>
+                        <p><?= $videopendukung1->keterangan ?></p>
                     </div>
                     <div class="single-choose-item">
-                        <h6><a href="#"><i class="fas fa-briefcase"></i> Easy to Use</a></h6>
-                        <p>Fusce viverra risus diam, in luctus nulla porta vel. Etiam nunc lorem, dapibus id augue vitae, lacinia pharetra eros. Fusce ac egestas purus, non porta est.</p>
+                        <h6><a href="#"><i class="fas fa-briefcase"></i> <?= $videopendukung2->judul ?></a></h6>
+                        <p><?= $videopendukung2->keterangan ?></p>
                     </div>
                 </div>
             </div>

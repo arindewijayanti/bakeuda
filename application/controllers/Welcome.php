@@ -30,7 +30,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+
+		$data['videoutama'] = $this->db->get_where('tbl_video',['id_video'=>'1'])->row();
+		$data['videopendukung1'] = $this->db->get_where('tbl_video',['id_video'=>'2'])->row();
+		$data['videopendukung2'] = $this->db->get_where('tbl_video',['id_video'=>'3'])->row();
+		$this->load->view('welcome_message',$data);
 	}
 
 	public function tentangbakeuda()

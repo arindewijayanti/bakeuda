@@ -53,8 +53,8 @@ $this->load->view('administrator/header');
                             <a href="#"><i class="fas fa-pencil-alt"></i></a>
                         </div>
                         <div class="item-content">
-                            <h6><a href="#">Link Video Youtube</a></h6>
-                            <p>Pengaturan Link Video Youtube</p>
+                            <h6><a href="<?php echo base_url('administrator/video')?>">Video</a></h6>
+                            <p>Pengaturan Video</p>
                         </div>
                     </div>
                 </div>

@@ -11,6 +11,7 @@ class Administrator extends CI_Controller {
 		$this->load->model('model_login');
 		$this->load->model('model_download');
 		$this->load->model('model_slidegambarutama');
+		$this->load->model('model_video');
 		$this->load->model('model_berita');
 		$this->load->library('session');
 	}
@@ -179,6 +180,42 @@ class Administrator extends CI_Controller {
 			}
 			*/
 	}
+
+	public function video()
+	{
+        $data['content'] = $this->model_video->Tampilvideo();
+		$this->load->view('administrator/video',$data);
+	}
+
+	public function videoadd()
+	{
+        $this->load->view('administrator/videoadd');
+	}
+
+	public function action_editvideo($id_video = '')
+	{
+		$this->db->where('id_video', $id_video);
+		$data['content'] = $this->db->get('tbl_video');
+		$this->load->view('administrator/videoedit', $data);
+	}
+
+	function action_videoadd()
+    {
+        $data = array(
+			'judul'=>$this->input->post('judul'),
+			'keterangan'=>$this->input->post('keterangan'),
+			'link'=>$this->input->post('link')
+        );
+		$id_video = $this->input->post('id_video');
+		$this->db->where('id_video', $id_video);
+        $this->db->update('tbl_video',$data);
+
+		
+		$data['content'] = $this->db->get('tbl_video');
+		redirect('administrator/video');
+	}
+
+	
 
 
 }
