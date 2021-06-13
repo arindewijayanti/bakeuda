@@ -75,8 +75,8 @@ $this->load->view('administrator/header');
                             <a href="#"><i class="fas fa-pencil-alt"></i></a>
                         </div>
                         <div class="item-content">
-                            <h6><a href="#">Tentang Bakeuda</a></h6>
-                            <p>Pengaturan Tentang Bakeuda, Visi Misi, Struktur Organisasi dan lain lain</p>
+                            <h6><a href="<?php echo base_url('administrator/tentangbakeuda')?>">Visi Misi</a></h6>
+                            <p>Pengaturan Tentang Bakeuda, Visi Misi dan lain lain</p>
                         </div>
                     </div>
                 </div>
@@ -108,11 +108,25 @@ $this->load->view('administrator/header');
                             <a href="#"><i class="fas fa-pencil-alt"></i></a>
                         </div>
                         <div class="item-content">
+                            <h6><a href="<?php echo base_url('administrator/strukturorganisasi')?>">Struktur Organisasi</a></h6>
+                            <p>Pengaturan Struktur Organisasi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                        </div>
+                        <div class="item-content">
                             <h6><a href="<?php echo base_url('administrator/berita')?>">Berita</a></h6>
                             <p>Pengaturan Berita</p>
                         </div>
                     </div>
                 </div>
+
+               
             </div>
         </div>
     </div>

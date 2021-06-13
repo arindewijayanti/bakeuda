@@ -40,12 +40,17 @@ class Welcome extends CI_Controller {
 		$data['bangunanbakeuda2'] = $this->db->get_where('tbl_bangunanbakeuda',['id_bangunanbakeuda'=>'2'])->row();
 		$data['bangunanbakeuda3'] = $this->db->get_where('tbl_bangunanbakeuda',['id_bangunanbakeuda'=>'3'])->row();
 
+		
 		$this->load->view('welcome_message',$data);
 	}
 
 	public function tentangbakeuda()
 	{
-		$this->load->view('tentangbakeuda');
+		$data['visi'] = $this->db->get_where('tbl_tentangbakeuda',['judul'=>'Visi'])->row();
+		$data['misi'] = $this->db->get_where('tbl_tentangbakeuda',['judul'=>'Misi'])->row();
+		$data['strukturorganisasi'] = $this->db->get_where('tbl_tentangbakeuda',['id_tentangbakeuda'=>'3'])->row();
+
+		$this->load->view('tentangbakeuda',$data);
 	}
 
 	public function download()

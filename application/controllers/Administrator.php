@@ -12,6 +12,7 @@ class Administrator extends CI_Controller {
 		$this->load->model('model_download');
 		$this->load->model('model_bangunanbakeuda');
 		$this->load->model('model_slidegambarutama');
+		$this->load->model('model_tentangbakeuda');
 		$this->load->model('model_video');
 		$this->load->model('model_berita');
 		$this->load->library('session');
@@ -237,6 +238,79 @@ class Administrator extends CI_Controller {
             if($query){
                 unlink("./assets/img/".$_id->image);
             }
+	}
+
+	public function tentangbakeuda()
+	{
+        $data['content'] = $this->model_tentangbakeuda->Tampiltentangbakeuda();
+		$this->load->view('administrator/tentangbakeuda',$data);
+	}
+
+	public function tentangbakeudaadd()
+	{
+        $this->load->view('administrator/tentangbakeudaadd');
+	}
+
+	public function action_edittentangbakeuda($id_tentangbakeuda = '')
+	{
+		$this->db->where('id_tentangbakeuda', $id_tentangbakeuda);
+		$data['content'] = $this->db->get('tbl_tentangbakeuda');
+		$this->load->view('administrator/tentangbakeudaedit', $data);
+	}
+
+	function action_tentangbakeudaadd()
+    {
+        $data = array(
+			'judul'=>$this->input->post('judul'),
+			'keterangan'=>$this->input->post('keterangan')
+        );
+		$id_tentangbakeuda = $this->input->post('id_tentangbakeuda');
+		$this->db->where('id_tentangbakeuda', $id_tentangbakeuda);
+        $this->db->update('tbl_tentangbakeuda',$data);
+
+		
+		$data['content'] = $this->db->get('tbl_tentangbakeuda');
+		redirect('administrator/tentangbakeuda');
+	}
+
+	public function strukturorganisasi()
+	{
+        $data['content'] = $this->model_tentangbakeuda->Tampiltentangbakeudastruktur();
+		$this->load->view('administrator/strukturorganisasi',$data);
+	}
+
+	public function strukturorganisasiadd()
+	{
+        $this->load->view('administrator/strukturorganisasiadd');
+	}
+
+	public function action_strukturorganisasiadd()
+	{
+		$config['upload_path']          = './uploads/';
+		$config['allowed_types']        = 'jpg|jpeg|png';
+		$config['encrypt_name']			= TRUE;
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		if ( ! $this->upload->do_upload('berkas'))
+		{
+				$error = array('error' => $this->upload->display_errors());
+				$this->load->view('administrator/strukturorganisasiadd', $error);
+		}
+		else
+		{
+			$data['keterangan'] = $this->upload->data("file_name");
+			$data['judul'] = "Struktur";
+			$this->db->insert('tbl_tentangbakeuda',$data);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
+			redirect('administrator/strukturorganisasi');
+		}
+	}
+
+	public function action_deletestrukturorganisasi($id_strukturorganisasi = '')
+	{
+			$this->model_tentangbakeuda->deletetentangbakeuda($id_strukturorganisasi);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil dihapus</div>');
+			redirect('administrator/strukturorganisasi','refresh');
 	}
 
 	

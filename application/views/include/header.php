@@ -42,6 +42,22 @@
    <script src="<?php echo base_url()?>assets/js/jquery-3.4.1.min.js"></script>
 
 </head>
+<style>
+    li.dropdown {
+		display: inline-block;
+	}
+ 
+	.dropdown:hover .isi-dropdown {
+		display: block;
+	}
+.isi-dropdown {
+		position: absolute;
+		display: none;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		background-color: #f9f9f9;
+	}
+</style>
 <body>  
     <!-- Start Header Area -->
     <div>
@@ -61,7 +77,7 @@
                             <nav class="menu-wrapper">
                             <ul class="main-menu">
                                 <b><li class="active"><a href="<?php echo base_url()?>">Beranda</a></li></b>
-                                <b><li><a href="<?php echo base_url('welcome/tentangbakeuda')?>">Tentang Bakeuda</a></li></b>
+                                <b><li class="dropdown"><a href="<?php echo base_url('welcome/tentangbakeuda')?>">Tentang Bakeuda</a></b> </li>
                                 <b><li><a href="<?php echo base_url('welcome/download')?>">Download</a></li></b>
                                 <b><li><a href="#contact-us">Situs Terkait</a></li></b>
                             </ul>
