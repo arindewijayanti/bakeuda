@@ -38,6 +38,12 @@ $this->load->view('include/header');
                         <p>Morbi vehicula a nibh in commodo. Aliquam quis dolor eget lectus pulvinar malesuada. Suspendisse eu rhoncus ligula.</p>
                     </div>
                 </div>
+                <div  class="col-lg-6" >
+                    <div class="single-choose-item">
+                        <h6><i class="fas fa-cogs"></i> Struktur Organisasi </a></h6>
+                        <a href="<?php echo base_url('welcome/download')?>">File Download</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -11,6 +11,7 @@ class Administrator extends CI_Controller {
 		$this->load->model('model_login');
 		$this->load->model('model_download');
 		$this->load->model('model_slidegambarutama');
+		$this->load->model('model_berita');
 		$this->load->library('session');
 	}
 
@@ -96,6 +97,47 @@ class Administrator extends CI_Controller {
 			redirect('administrator/download','refresh');
 	}
 
+
+	public function berita()
+	{
+        $data['content'] = $this->model_berita->Tampilberita();
+		$this->load->view('administrator/berita',$data);
+	}
+
+	public function beritaadd()
+	{
+        $this->load->view('administrator/beritaadd');
+	}
+
+	public function action_beritaadd()
+	{
+		$config['upload_path']          = './uploads/';
+		$config['allowed_types']        = 'gif|jpg|jpeg|png|pdf';
+		$config['encrypt_name']			= TRUE;
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		if ( ! $this->upload->do_upload('berkas'))
+		{
+				$error = array('error' => $this->upload->display_errors());
+				$this->load->view('administrator/beritaadd', $error);
+		}
+		else
+		{
+			$data['nama_berkas'] = $this->upload->data("file_name");
+			$data['keterangan_berkas'] = $this->input->post('keterangan_berkas');
+			$this->db->insert('tbl_berita',$data);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
+			redirect('administrator/berita');
+		}
+	}
+
+	public function action_deleteberita($id_strukturorganisasi = '')
+	{
+			$this->model_berita->deleteberita($id_strukturorganisasi);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil dihapus</div>');
+			redirect('administrator/berita','refresh');
+	}
+
 	public function slidegambarutama()
 	{
         $data['content'] = $this->model_slidegambarutama->Tampilslidegambarutama();
@@ -137,8 +179,6 @@ class Administrator extends CI_Controller {
 			}
 			*/
 	}
-
-	
 
 
 }

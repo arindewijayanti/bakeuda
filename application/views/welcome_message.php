@@ -196,7 +196,7 @@ $this->load->view('include/header');
                     <div class="blog-carousel owl-carousel">
                         <div class="single-blog-item">
                             <div class="single-blog-img">
-                                <img src="<?php echo base_url()?>assets/img/blog_01.jpg" alt="">
+                                <img src="<?php echo base_url()?>administrator/berita" alt="">
                                 <span>October 25, 2017</span>
                             </div>
                             <div class="blog-content">
@@ -214,7 +214,7 @@ $this->load->view('include/header');
                         </div>
                         <div class="single-blog-item">
                             <div class="single-blog-img">
-                                <img src="<?php echo base_url()?>assets/img/blog_02.jpg" alt="">
+                                <img src="<?php echo base_url()?>uploads/03940cb9e46f5e4d8d5fa3c9f3ba56fc.jpg" alt="">
                                 <span>October 25, 2017</span>
                             </div>
                             <div class="blog-content">
