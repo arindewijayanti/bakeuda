@@ -11,7 +11,6 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_login');
 		$this->load->model('model_download');
 		$this->load->library('session');
-		$this->load->model('model_polling');
 	}
 
 	/**
@@ -31,22 +30,44 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$data['slidegambarutama1'] = $this->db->get_where('tbl_slidegambarutama',['id_slidegambarutama'=>'1'])->row();
+		$data['slidegambarutama2'] = $this->db->get_where('tbl_slidegambarutama',['id_slidegambarutama'=>'2'])->row();
+		$data['slidegambarutama3'] = $this->db->get_where('tbl_slidegambarutama',['id_slidegambarutama'=>'3'])->row();
 
-		$data['videoutama'] = $this->db->get_where('tbl_video',['id_video'=>'1'])->row();
-		$data['videopendukung1'] = $this->db->get_where('tbl_video',['id_video'=>'2'])->row();
-		$data['videopendukung2'] = $this->db->get_where('tbl_video',['id_video'=>'3'])->row();
-
-		
 		$data['bangunanbakeuda1'] = $this->db->get_where('tbl_bangunanbakeuda',['id_bangunanbakeuda'=>'1'])->row();
 		$data['bangunanbakeuda2'] = $this->db->get_where('tbl_bangunanbakeuda',['id_bangunanbakeuda'=>'2'])->row();
 		$data['bangunanbakeuda3'] = $this->db->get_where('tbl_bangunanbakeuda',['id_bangunanbakeuda'=>'3'])->row();
 
+		
+		$data['profil'] = $this->db->get_where('tbl_profil',['id_profil'=>'1'])->row();
+		
+		$data['videoutama'] = $this->db->get_where('tbl_video',['id_video'=>'1'])->row();
+		$data['videopendukung1'] = $this->db->get_where('tbl_video',['id_video'=>'2'])->row();
+		$data['videopendukung2'] = $this->db->get_where('tbl_video',['id_video'=>'3'])->row();
+
+		$data['galeri1'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'1'])->row();
+		$data['galeri2'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'2'])->row();
+		$data['galeri3'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'3'])->row();
+		$data['galeri4'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'4'])->row();
+		$data['galeri5'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'5'])->row();
+		$data['galeri6'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'6'])->row();
+		$data['galeri7'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'7'])->row();
+
+
+		
+
+	
 		$this->load->view('welcome_message',$data);
 	}
 
 	public function tentangbakeuda()
 	{
-		$this->load->view('tentangbakeuda');
+		$data['visi'] = $this->db->get_where('tbl_tentangbakeuda',['judul'=>'Visi'])->row();
+		$data['misi'] = $this->db->get_where('tbl_tentangbakeuda',['judul'=>'Misi'])->row();
+		$data['struktur'] = $this->db->get_where('tbl_tentangbakeuda',['judul'=>'Struktur'])->row();
+		$data['profil'] = $this->db->get_where('tbl_profil',['id_profil'=>'1'])->row();
+
+		$this->load->view('tentangbakeuda',$data);
 	}
 
 	public function download()

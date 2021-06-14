@@ -358,7 +358,7 @@ $this->load->view('include/header');
                             <li><a href="#">Situs Terkait</a></li>
                         </ul>
                     </div>
-                    </div>
+                </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <div class="widget-title">
@@ -370,77 +370,6 @@ $this->load->view('include/header');
                             <p>Fax: (0634) 27075</p>
                             <p>Email: <a href="mailto:contact@be-one.com">bakeudasidimpuan@gmail.com</a></p>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <div class="widget-title">
-                            <h6>Kontak Kami</h6>
-                        </div>
-                     
- <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title> Polling Framework CSS Terbaik </title>
-	<link rel="stylesheet" href="bootstrap.min.css">
-</head>
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h2 class="text-center">Polling Framework CSS Terbaik</h2>
-				<hr>
-				<div class="row">
-					<div class="col-6">
-						<p class="lead">Which one is Best CSS Framework</p>
-						<hr>
-						<form action="" method="post">
-							<div>
-								<?php foreach($query as $row){ ?>
-									<div class="form-group">
-										<input name="id" type="radio" aria-valuenow="" class="pollradio" value="<?php echo $row['id'] ?>">
-										<?php echo $row['framework'] ?>
-									</div>
-								<?php } ?>	
-							</div>
-							<br>
-							<button type="submit" name="submit" class="btn btn-primary" id="btn">submit</button>
-						</form>
-
-					</div>
-
-					<div class="col-6">
-						<p class="lead">Live Polling Framework CSS</p>
-						<hr>
-
-						<div class="row mb-3">
-							<?php foreach($query as $row){ ?>
-								<div class="col-3 mb-3">
-										<div><?php echo $row['framework'] ?></div>
-								</div>
-								<div class="col-8">
-									<div class="progress mt-1">
-									  <div class="progress-bar <?php 
-									  if ($row['value']>50 && $row['value']<100) echo 'bg-success';
-									  else if($row['value'] >= 100) echo "bg-primary";
-									  else if($row['value'] < 50) echo "bg-danger";
-
-									  ?>" role="progressbar" style="width: <?php echo $row['value'] ?>%;" aria-valuenow="<?php echo $row['value'] ?>" aria-valuemin="0" aria-valuemax="100"><?php echo $row['value'] ?>% <?php echo $row['value'] >= 100 ? 'Completed' : 'Uncompleted' ?></div>
-									</div>		
-								</div>
-							<?php } ?>
-						</div>						
-						
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
                     </div>
                 </div>
                
