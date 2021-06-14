@@ -48,7 +48,7 @@ class Welcome extends CI_Controller {
 	{
 		$data['visi'] = $this->db->get_where('tbl_tentangbakeuda',['judul'=>'Visi'])->row();
 		$data['misi'] = $this->db->get_where('tbl_tentangbakeuda',['judul'=>'Misi'])->row();
-		$data['strukturorganisasi'] = $this->db->get_where('tbl_tentangbakeuda',['id_tentangbakeuda'=>'3'])->row();
+		$data['struktur'] = $this->db->get_where('tbl_tentangbakeuda',['judul'=>'Struktur'])->row();
 
 		$this->load->view('tentangbakeuda',$data);
 	}

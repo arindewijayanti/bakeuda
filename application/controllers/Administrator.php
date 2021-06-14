@@ -232,17 +232,36 @@ class Administrator extends CI_Controller {
 
 	public function action_bangunanbakeudaupdate()
 	{
-			$id = $this->input->post('nama_berkas');
-			$_id = $this->db->get_where('tbl_bangunanbakeuda',['nama_berkas' => $id])->row();
-            $query = $this->db->delete('tbl_bangunanbakeuda',['nama_berkas'=>$id]);
-            if($query){
-                unlink("./assets/img/".$_id->image);
-            }
+
+		$config['upload_path']          = './uploads/';
+		$config['allowed_types']        = 'jpg|jpeg|png';
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		if ( ! $this->upload->do_upload('berkas'))
+		{
+				$error = array('error' => $this->upload->display_errors());
+				$this->load->view('administrator/bangunanbakeuda', $error);
+		}
+		else
+		{
+			
+			$id_bangunanbakeuda = $this->input->post('id_bangunanbakeuda');
+			$data['nama_berkas'] = $this->upload->data("file_name");
+			$data['keterangan'] = $this->input->post('keterangan');
+			$data['judul'] = $this->input->post('judul');
+			$this->db->where('id_bangunanbakeuda', $id_bangunanbakeuda);
+			$this->db->update('tbl_bangunanbakeuda',$data);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
+			redirect('administrator/bangunanbakeuda');
+		}
+
+
 	}
 
 	public function tentangbakeuda()
 	{
         $data['content'] = $this->model_tentangbakeuda->Tampiltentangbakeuda();
+        $data['struktur'] = $this->model_tentangbakeuda->Tampiltentangbakeudastruktur();
 		$this->load->view('administrator/tentangbakeuda',$data);
 	}
 
@@ -288,7 +307,6 @@ class Administrator extends CI_Controller {
 	{
 		$config['upload_path']          = './uploads/';
 		$config['allowed_types']        = 'jpg|jpeg|png';
-		$config['encrypt_name']			= TRUE;
 		$this->load->library('upload', $config);
 		$this->upload->initialize($config);
 		if ( ! $this->upload->do_upload('berkas'))

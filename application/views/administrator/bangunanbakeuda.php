@@ -43,7 +43,7 @@ $this->load->view('administrator/header');
                   <td align="center"><?= $data->keterangan ?></td>
                   <td align="center"><?= $data->nama_berkas ?></td>
                   <td> 
-                  <a href="<?php echo base_url()?>administrator/action_editbangunanbakeuda/<?php echo $data->id_bangunanbakeuda; ?>" class="btn btn-danger">Edit<i class="fa fa-edit"></i></a>
+                  <a href="<?php echo base_url()?>administrator/bangunanbakeudaedit/<?php echo $data->id_bangunanbakeuda; ?>" class="btn btn-danger">Edit<i class="fa fa-edit"></i></a>
       
                   </td> 
                 </tr>

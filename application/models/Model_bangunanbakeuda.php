@@ -10,7 +10,7 @@ class Model_bangunanbakeuda extends CI_Model {
 
 	function Tampilbangunanbakeuda() 
     {
-		$this->db->order_by('nama_berkas');
+		$this->db->order_by('id_bangunanbakeuda');
         return $this->db->from('tbl_bangunanbakeuda')
 			->get();
     }

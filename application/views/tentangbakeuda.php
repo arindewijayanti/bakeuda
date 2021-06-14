@@ -15,12 +15,18 @@ $this->load->view('include/header');
         </div>
     </div>
     <!-- End Latest Project Area -->
-    <!-- Start Working With Us Area -->
-    <div class="working-with-us-area gray-bg">
+     <!-- Start Working With Us Area -->
+     <div class="working-with-us-area gray-bg">
         <div class="container"> 
             <div class="row">
                 <div class="col-md-6 col-12 text-center d-flex align-items-center">
-                   
+                    <div class="hire-us-content">
+                        <div class="section-title">
+                            <h4>SULAIMAN LUBIS, S.E</h4>
+                        </div>
+                        <p>We’ve completed more than <span>100+</span>project for our am azing clients, If you interested?</p>
+              
+                    </div>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
                     <div class="hire-us-img">
@@ -45,11 +51,11 @@ $this->load->view('include/header');
             <div class="row">
                 <div  class="col-lg-6" >
                     <div class="single-choose-item">
-                        <h6><i class="fas fa-cogs"></i> Struktur Organisasi </a></h6>
-                        <a href="<?php echo base_url('welcome/download')?>">File Download</a>
+                        <img src="<?php echo base_url('uploads/'.$struktur->keterangan)?>" width="1080px" alt="">
+            
                     </div>
                 </div>
-            </div>
+            </div>  
         </div>
     </div>
     <!-- End Struktur Organisasi Area -->

@@ -1,6 +1,11 @@
 <?php 
 $this->load->view('include/header'); 
 ?>
+<style>
+.icon-box-img-1 {background-image: url(<?php echo base_url()?>uploads/<?= $bangunanbakeuda1->nama_berkas ?>);}
+.icon-box-img-2 {background-image: url(<?php echo base_url()?>uploads/<?= $bangunanbakeuda2->nama_berkas ?>);}
+.icon-box-img-3 {background-image: url(<?php echo base_url()?>uploads/<?= $bangunanbakeuda3->nama_berkas ?>);}
+</style>
     <br>
     <!-- Start Slider Area -->
     <div class="slider-area ">
@@ -170,7 +175,7 @@ $this->load->view('include/header');
                             <h4>SULAIMAN LUBIS, S.E</h4>
                         </div>
                         <p>We’ve completed more than <span>100+</span>project for our am azing clients, If you interested?</p>
-                        <a href="#" class="btn hire-us-btn">Struktur Organisasi</a>
+                        <a href="<?php echo base_url()?>welcome/tentangbakeuda" class="btn hire-us-btn">Struktur Organisasi</a>
                     </div>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
