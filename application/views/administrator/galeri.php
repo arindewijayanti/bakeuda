@@ -14,7 +14,8 @@ $this->load->view('administrator/header');
       </ol>
 
       <div class="container">
-      
+      <a href="<?php echo base_url('administrator/downloadadd')?>" class="btn btn-primary" style="margin-bottom: 10px;"><i class="fa fa-plus">Tambah Data</a></i>
+  
   <!-- Example DataTables Card-->
   <div class="card mb-3">
         <div class="card-header">
