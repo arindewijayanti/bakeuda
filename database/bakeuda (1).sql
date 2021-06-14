@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2021 at 10:18 AM
+-- Generation Time: Jun 14, 2021 at 01:05 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.30
 
@@ -61,9 +61,9 @@ CREATE TABLE `tbl_bangunanbakeuda` (
 --
 
 INSERT INTO `tbl_bangunanbakeuda` (`id_bangunanbakeuda`, `judul`, `keterangan`, `nama_berkas`) VALUES
-(1, 'Gambar 1', 'Gambar 1', 'Gambar 1'),
-(2, 'Gambar 2', 'Gambar 2', 'Gambar 2'),
-(3, 'Gambar 3', 'Gambar 3', 'Gambar 3\r\n');
+(1, 'Gambar 1', 'Gambar 1', 'no-image-found-360x25011.png'),
+(2, 'Gambar 2', 'Gambar 2', 'no-image-found-360x25012.png'),
+(3, 'Gambar 3', 'Gambar 3', 'no-image-found-360x25013.png');
 
 -- --------------------------------------------------------
 
@@ -101,9 +101,52 @@ CREATE TABLE `tbl_download` (
 --
 
 INSERT INTO `tbl_download` (`id_download`, `nama_berkas`, `keterangan_berkas`) VALUES
-(2, 'e9406976eacb093523894855bffb6046.pdf', 'Buku Kas Umum'),
-(5, '0091b1375ba577244334b72fd865a399.jpg', 'arin\r\n'),
-(6, 'b34fc99dc41224a64edf3f8f6c994ade.pdf', 'Struktur Organisasi');
+(7, '5408874fa61bea7521bfc96ba1d4a096.pdf', 'Alur Siabpadsim\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_galeri`
+--
+
+CREATE TABLE `tbl_galeri` (
+  `id_galeri` int(11) NOT NULL,
+  `judul` varchar(128) NOT NULL,
+  `nama_berkas` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_galeri`
+--
+
+INSERT INTO `tbl_galeri` (`id_galeri`, `judul`, `nama_berkas`) VALUES
+(1, 'Galeri 1', 'no-image-found-360x2504.png'),
+(2, 'Galeri 2', 'no-image-found-360x2505.png'),
+(3, 'Galeri  3', 'no-image-found-360x2506.png'),
+(4, 'Galeri  4', 'no-image-found-360x2507.png'),
+(5, 'Galeri  5', 'no-image-found-360x2508.png'),
+(6, 'Galeri  6', 'no-image-found-360x2509.png'),
+(7, 'Galeri  7', 'no-image-found-360x25010.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_profil`
+--
+
+CREATE TABLE `tbl_profil` (
+  `id_profil` int(128) NOT NULL,
+  `nama` varchar(128) NOT NULL,
+  `jabatan` varchar(128) NOT NULL,
+  `nama_berkas` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_profil`
+--
+
+INSERT INTO `tbl_profil` (`id_profil`, `nama`, `jabatan`, `nama_berkas`) VALUES
+(1, 'SULAIMAN LUBIS, S.E', 'Kepala Badan Keuangan Daerah Kota Padangsidimpuan', '01072013-seleb-051.jpg');
 
 -- --------------------------------------------------------
 
@@ -121,7 +164,30 @@ CREATE TABLE `tbl_slidegambarutama` (
 --
 
 INSERT INTO `tbl_slidegambarutama` (`id_slidegambarutama`, `nama_berkas`) VALUES
-(3, 'slide_03.jpg');
+(1, 'no-image-found-360x25014.png'),
+(2, 'no-image-found-360x25015.png'),
+(3, 'no-image-found-360x25016.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_tentangbakeuda`
+--
+
+CREATE TABLE `tbl_tentangbakeuda` (
+  `id_tentangbakeuda` int(11) NOT NULL,
+  `judul` varchar(250) NOT NULL,
+  `keterangan` varchar(999) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_tentangbakeuda`
+--
+
+INSERT INTO `tbl_tentangbakeuda` (`id_tentangbakeuda`, `judul`, `keterangan`) VALUES
+(1, 'Visi', 'adahdakdhakdhasdjk bkadajkdh akdj askdas kaksdfhasjkfhasjkf hklasfhasjklfhs ajkfh jkasfhaskl fhsaklj fhklj hsaflk 45 askdjhajkha klasjfhasjklfh ksdj fhsjkfhaskjf hsajkf hasjkfhasjklfh askfhsdkljfhsd kjfhsd jklfhsd jklfs klfhsajkl fhasjkfh sjklf 76 ak adahdakdhakdhasdjk bkadajkdh akdj askdas kaksdfhasjkfhasjkf hklasfhasjklfhs ajkfh jkasfhaskl fhsaklj fhklj hsaflk 45 askdjhajkha klasjfhasjklfh ksdj fhsjkfhaskjf hsajkf hasjkfhasjklfh askfhsdkljfhsd kjfhsd jklfhsd jklfs klfhsajkl fhasjkfh sjklf 76 ak 98'),
+(2, 'Misi', 'adahdakdhakdhasdjk bkadajkdh akdj askdas kaksdfhasjkfhasjkf hklasfhasjklfhs ajkfh jkasfhaskl fhsaklj fhklj hsaflk 45 askdjhajkha klasjfhasjklfh ksdj fhsjkfhaskjf hsajkf hasjkfhasjklfh askfhsdkljfhsd kjfhsd jklfhsd jklfs klfhsajkl fhasjkfh sjklf 76 ak adahdakdhakdhasdjk bkadajkdh akdj askdas kaksdfhasjkfhasjkf hklasfhasjklfhs ajkfh jkasfhaskl fhsaklj fhklj hsaflk 45 askdjhajkha klasjfhasjklfh ksdj fhsjkfhaskjf hsajkf hasjkfhasjklfh askfhsdkljfhsd kjfhsd jklfhsd jklfs klfhsajkl fhasjkfh sjklf 76 ak 98 561'),
+(3, 'Struktur', 'contoh_struktur_organisasi2.png');
 
 -- --------------------------------------------------------
 
@@ -132,7 +198,7 @@ INSERT INTO `tbl_slidegambarutama` (`id_slidegambarutama`, `nama_berkas`) VALUES
 CREATE TABLE `tbl_video` (
   `id_video` int(128) NOT NULL,
   `judul` varchar(128) NOT NULL,
-  `keterangan` varchar(128) NOT NULL,
+  `keterangan` varchar(250) NOT NULL,
   `link` varchar(128) NOT NULL,
   `status` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -142,9 +208,9 @@ CREATE TABLE `tbl_video` (
 --
 
 INSERT INTO `tbl_video` (`id_video`, `judul`, `keterangan`, `link`, `status`) VALUES
-(1, 'Update Corona Indonesia 11 Juni 2021', 'JAKARTA, KOMPAS.TV  Satuan Tugas Penanganan Covid-19 merilis perkembangan data kasus Covid-19 di Indonesia.', 'https://www.youtube.com/watch?v=sLexonNk16g', 'Utama'),
-(2, 'judul pendukung 1', 'keterangan pendukung 1', 'link pendukung 1', 'Pendukung'),
-(3, 'judul pendukung 2', 'keterangan pendukung 2', 'link pendukung 2', 'Pendukung');
+(1, 'Update Corona Indonesia 11 Juni 2021', 'JAKARTA, KOMPAS.TV  Satuan Tugas Penanganan Covid-19 merilis perkembangan data kasus Covid-19 di Indonesia.', 'sLexonNk16g', 'Utama'),
+(2, 'Tempat Wisata Ditutup Saat Libur Lebaran', 'Pengelola Taman Wisata Alam Puntikayu Palembang, menutup aktivitasnya dari kunjungan. Hal itu dilakukan karena saat ini Kota Pal', 'EtfTeAmL2Gk', 'Pendukung'),
+(3, '7 Cara Menjaga Sistem Imun Tubuh Tetap Sehat Lawan Corona', 'JAKARTA, KOMPAS.TV - Salah satu yang dapat dilakukan untuk melindungi diri dari paparan virus corona adalah menjaga sistem imun ', 'hW08aY3aE_k', 'Pendukung');
 
 --
 -- Indexes for dumped tables
@@ -169,10 +235,28 @@ ALTER TABLE `tbl_download`
   ADD PRIMARY KEY (`id_download`);
 
 --
+-- Indexes for table `tbl_galeri`
+--
+ALTER TABLE `tbl_galeri`
+  ADD PRIMARY KEY (`id_galeri`);
+
+--
+-- Indexes for table `tbl_profil`
+--
+ALTER TABLE `tbl_profil`
+  ADD PRIMARY KEY (`id_profil`);
+
+--
 -- Indexes for table `tbl_slidegambarutama`
 --
 ALTER TABLE `tbl_slidegambarutama`
   ADD PRIMARY KEY (`id_slidegambarutama`);
+
+--
+-- Indexes for table `tbl_tentangbakeuda`
+--
+ALTER TABLE `tbl_tentangbakeuda`
+  ADD PRIMARY KEY (`id_tentangbakeuda`,`judul`);
 
 --
 -- Indexes for table `tbl_video`
@@ -200,13 +284,31 @@ ALTER TABLE `tbl_berita`
 -- AUTO_INCREMENT for table `tbl_download`
 --
 ALTER TABLE `tbl_download`
-  MODIFY `id_download` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_download` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `tbl_galeri`
+--
+ALTER TABLE `tbl_galeri`
+  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `tbl_profil`
+--
+ALTER TABLE `tbl_profil`
+  MODIFY `id_profil` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_slidegambarutama`
 --
 ALTER TABLE `tbl_slidegambarutama`
-  MODIFY `id_slidegambarutama` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_slidegambarutama` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT for table `tbl_tentangbakeuda`
+--
+ALTER TABLE `tbl_tentangbakeuda`
+  MODIFY `id_tentangbakeuda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tbl_video`
