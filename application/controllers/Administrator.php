@@ -12,6 +12,7 @@ class Administrator extends CI_Controller {
 		$this->load->model('model_download');
 		$this->load->model('model_bangunanbakeuda');
 		$this->load->model('model_profil');
+		$this->load->model('model_galeri');
 		$this->load->model('model_slidegambarutama');
 		$this->load->model('model_tentangbakeuda');
 		$this->load->model('model_video');
@@ -362,6 +363,46 @@ class Administrator extends CI_Controller {
 			$this->db->update('tbl_profil',$data);
 			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
 			redirect('administrator/profil');
+		}
+
+
+	}
+
+	public function galeri()
+	{
+        $data['content'] = $this->model_galeri->Tampilgaleri();
+		$this->load->view('administrator/galeri',$data);
+	}
+
+	public function galeriedit($id_galeri = NULL)
+	{
+		$this->db->where('id_galeri', $id_galeri);
+		$data['content'] = $this->db->get('tbl_galeri');
+		$this->load->view('administrator/galeriedit', $data);
+	}
+
+	public function action_galeriupdate()
+	{
+
+		$config['upload_path']          = './uploads/';
+		$config['allowed_types']        = 'jpg|jpeg|png';
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		if ( ! $this->upload->do_upload('berkas'))
+		{
+				$error = array('error' => $this->upload->display_errors());
+				$this->load->view('administrator/galeri', $error);
+		}
+		else
+		{
+			
+			$id_galeri = $this->input->post('id_galeri');
+			$data['nama_berkas'] = $this->upload->data("file_name");
+			$data['judul'] = $this->input->post('judul');
+			$this->db->where('id_galeri', $id_galeri);
+			$this->db->update('tbl_galeri',$data);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
+			redirect('administrator/galeri');
 		}
 
 

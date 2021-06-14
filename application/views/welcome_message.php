@@ -9,6 +9,14 @@ $this->load->view('include/header');
 .icon-box-img-1 {background-image: url(<?php echo base_url()?>uploads/<?= $bangunanbakeuda1->nama_berkas ?>);}
 .icon-box-img-2 {background-image: url(<?php echo base_url()?>uploads/<?= $bangunanbakeuda2->nama_berkas ?>);}
 .icon-box-img-3 {background-image: url(<?php echo base_url()?>uploads/<?= $bangunanbakeuda3->nama_berkas ?>);}
+
+.project-bg-1 {background-image: url(<?php echo base_url()?>uploads/<?= $galeri1->nama_berkas ?>);}
+.project-bg-2 {background-image: url(<?php echo base_url()?>uploads/<?= $galeri2->nama_berkas ?>);}
+.project-bg-3 {background-image: url(<?php echo base_url()?>uploads/<?= $galeri3->nama_berkas ?>);}
+.project-bg-4 {background-image: url(<?php echo base_url()?>uploads/<?= $galeri4->nama_berkas ?>);}
+.project-bg-5 {background-image: url(<?php echo base_url()?>uploads/<?= $galeri5->nama_berkas ?>);}
+.project-bg-6 {background-image: url(<?php echo base_url()?>uploads/<?= $galeri6->nama_berkas ?>);}
+.project-bg-7 {background-image: url(<?php echo base_url()?>uploads/<?= $galeri7->nama_berkas ?>);}
 </style>
     <br>
     <!-- Start Slider Area -->

@@ -42,7 +42,7 @@ $this->load->view('administrator/header');
                             <a href="#"><i class="fas fa-pencil-alt"></i></a>
                         </div>
                         <div class="item-content">
-                            <h6><a href="#">Slide Galeri</a></h6>
+                            <h6><a href="<?php echo base_url('administrator/galeri')?>">Slide Galeri</a></h6>
                             <p>Pengaturan Slide Galeri</p>
                         </div>
                     </div>
