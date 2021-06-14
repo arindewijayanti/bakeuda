@@ -77,7 +77,6 @@ class Administrator extends CI_Controller {
 	{
 		$config['upload_path']          = './uploads/';
 		$config['allowed_types']        = 'gif|jpg|jpeg|png|pdf';
-		$config['encrypt_name']			= TRUE;
 		$this->load->library('upload', $config);
 		$this->upload->initialize($config);
 		if ( ! $this->upload->do_upload('berkas'))
@@ -118,7 +117,6 @@ class Administrator extends CI_Controller {
 	{
 		$config['upload_path']          = './uploads/';
 		$config['allowed_types']        = 'gif|jpg|jpeg|png|pdf';
-		$config['encrypt_name']			= TRUE;
 		$this->load->library('upload', $config);
 		$this->upload->initialize($config);
 		if ( ! $this->upload->do_upload('berkas'))
@@ -370,7 +368,8 @@ class Administrator extends CI_Controller {
 
 	public function galeri()
 	{
-        $data['content'] = $this->model_galeri->Tampilgaleri();
+        $data['contentutama'] = $this->model_galeri->Tampilgaleriutama();
+        $data['contenttambahan'] = $this->model_galeri->Tampilgaleritambahan();
 		$this->load->view('administrator/galeri',$data);
 	}
 
@@ -406,9 +405,42 @@ class Administrator extends CI_Controller {
 		}
 
 
+		
+
 	}
 
+	public function galeriadd()
+	{
+        $this->load->view('administrator/galeriadd');
+	}
 
+	public function action_galeriadd()
+	{
+		$config['upload_path']          = './uploads/';
+		$config['allowed_types']        = 'jpg|jpeg|png';
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		if ( ! $this->upload->do_upload('berkas'))
+		{
+				$error = array('error' => $this->upload->display_errors());
+				$this->load->view('administrator/galeriadd', $error);
+		}
+		else
+		{
+			$data['nama_berkas'] = $this->upload->data("file_name");
+			$data['judul'] = $this->input->post('judul');
+			$this->db->insert('tbl_galeri',$data);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
+			redirect('administrator/galeri');
+		}
+	}
+
+	public function action_deletegaleri($id_galeri = '')
+	{
+			$this->model_galeri->deletegaleri($id_galeri);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil dihapus</div>');
+			redirect('administrator/galeri','refresh');
+	}
 	
 
 
