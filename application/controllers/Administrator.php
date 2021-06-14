@@ -156,31 +156,25 @@ class Administrator extends CI_Controller {
 
 	public function action_slidegambarutamaupdate()
 	{
-			$id = $this->input->post('nama_berkas');
-			$_id = $this->db->get_where('tbl_slidegambarutama',['nama_berkas' => $id])->row();
-            $query = $this->db->delete('tbl_slidegambarutama',['nama_berkas'=>$id]);
-            if($query){
-                unlink("./assets/img/".$_id->image);
-            }
-
-			/*
-			$config['upload_path']          = './assets/img/';
-			$config['allowed_types']        = 'jpg|jpeg|png';
-			$this->load->library('upload', $config);
-			$this->upload->initialize($config);
-			if ( ! $this->upload->do_upload('berkas'))
-			{
-					$error = array('error' => $this->upload->display_errors());
-					$this->load->view('administrator/slidegambarutamaedit', $error);
-			}
-			else
-			{
-				$data['nama_berkas'] = $this->input->post('nama_berkas');
-				$this->db->insert('tbl_slidegambarutama',$data);
-				$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
-				redirect('administrator/slidegambarutama');
-			}
-			*/
+		$config['upload_path']          = './uploads/';
+		$config['allowed_types']        = 'jpg|jpeg|png';
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		if ( ! $this->upload->do_upload('berkas'))
+		{
+				$error = array('error' => $this->upload->display_errors());
+				$this->load->view('administrator/slidegambarutama', $error);
+		}
+		else
+		{
+			
+			$id_slidegambarutama = $this->input->post('id_slidegambarutama');
+			$data['nama_berkas'] = $this->upload->data("file_name");
+			$this->db->where('id_slidegambarutama', $id_slidegambarutama);
+			$this->db->update('tbl_slidegambarutama',$data);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
+			redirect('administrator/slidegambarutama');
+		}
 	}
 
 	public function video()

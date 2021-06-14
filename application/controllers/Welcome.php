@@ -30,17 +30,20 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$data['slidegambarutama1'] = $this->db->get_where('tbl_slidegambarutama',['id_slidegambarutama'=>'1'])->row();
+		$data['slidegambarutama2'] = $this->db->get_where('tbl_slidegambarutama',['id_slidegambarutama'=>'2'])->row();
+		$data['slidegambarutama3'] = $this->db->get_where('tbl_slidegambarutama',['id_slidegambarutama'=>'3'])->row();
 
-		$data['videoutama'] = $this->db->get_where('tbl_video',['id_video'=>'1'])->row();
-		$data['videopendukung1'] = $this->db->get_where('tbl_video',['id_video'=>'2'])->row();
-		$data['videopendukung2'] = $this->db->get_where('tbl_video',['id_video'=>'3'])->row();
-
-		
 		$data['bangunanbakeuda1'] = $this->db->get_where('tbl_bangunanbakeuda',['id_bangunanbakeuda'=>'1'])->row();
 		$data['bangunanbakeuda2'] = $this->db->get_where('tbl_bangunanbakeuda',['id_bangunanbakeuda'=>'2'])->row();
 		$data['bangunanbakeuda3'] = $this->db->get_where('tbl_bangunanbakeuda',['id_bangunanbakeuda'=>'3'])->row();
 
 		
+		$data['videoutama'] = $this->db->get_where('tbl_video',['id_video'=>'1'])->row();
+		$data['videopendukung1'] = $this->db->get_where('tbl_video',['id_video'=>'2'])->row();
+		$data['videopendukung2'] = $this->db->get_where('tbl_video',['id_video'=>'3'])->row();
+
+	
 		$this->load->view('welcome_message',$data);
 	}
 

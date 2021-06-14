@@ -36,8 +36,8 @@ $this->load->view('administrator/header');
                 <?php 
                   $i = 1;
                   foreach ($content->result() as $data) : ?>
-                  <td><?= $i ?></td>
-                  <td><img width="300" src="<?php echo base_url(); ?>assets/img/<?php echo $data->nama_berkas; ?>"/></td>
+                  <td><?php echo $data->id_slidegambarutama; ?></td>
+                  <td><img width="300" src="<?php echo base_url(); ?>uploads/<?php echo $data->nama_berkas; ?>"/></td>
                         <td> 
                     <a href="<?php echo base_url()?>administrator/slidegambarutamaedit/<?php echo $data->id_slidegambarutama; ?>" class="btn btn-danger">Edit</i></a>
                   </td> 

@@ -10,7 +10,7 @@ class Model_slidegambarutama extends CI_Model {
 
 	function Tampilslidegambarutama() 
     {
-		$this->db->order_by('nama_berkas');
+		$this->db->order_by('id_slidegambarutama');
         return $this->db->from('tbl_slidegambarutama')
 			->get();
     }

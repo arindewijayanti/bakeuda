@@ -59,7 +59,7 @@
                             <td>
                             <nav class="menu-wrapper">
                             <ul class="main-menu">
-                                <b><li class="active"><a href="#">Beranda</a></li></b>
+                                <b><li class="active"><a href="<?php echo base_url('administrator'); ?>">Beranda</a></li></b>
                                 <b><li><a href="#feature">Tentang Bakeuda</a></li></b>
                                 <b><li><a href="#blog">Download</a></li></b>
                                 <b><li><a href="#contact-us">Situs Terkait</a></li></b>

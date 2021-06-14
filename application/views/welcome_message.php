@@ -2,6 +2,10 @@
 $this->load->view('include/header'); 
 ?>
 <style>
+.slider-bg-1 {background: url(<?php echo base_url()?>uploads/<?= $slidegambarutama1->nama_berkas ?>);}
+.slider-bg-2 {background: url(<?php echo base_url()?>uploads/<?= $slidegambarutama2->nama_berkas ?>);}
+.slider-bg-3 {background: url(<?php echo base_url()?>uploads/<?= $slidegambarutama3->nama_berkas ?>);}
+
 .icon-box-img-1 {background-image: url(<?php echo base_url()?>uploads/<?= $bangunanbakeuda1->nama_berkas ?>);}
 .icon-box-img-2 {background-image: url(<?php echo base_url()?>uploads/<?= $bangunanbakeuda2->nama_berkas ?>);}
 .icon-box-img-3 {background-image: url(<?php echo base_url()?>uploads/<?= $bangunanbakeuda3->nama_berkas ?>);}

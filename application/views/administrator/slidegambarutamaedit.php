@@ -8,7 +8,7 @@ $this->load->view('administrator/header');
       <div class="container">
       <ol class="breadcrumb" >
         <li class="breadcrumb-item">
-          <a href="<?php echo base_url('administrator/download')?>">Daftar Slide Gambar Utama</a>
+          <a href="<?php echo base_url('administrator/slidegambarutama')?>">Daftar Slide Gambar Utama</a>
         </li>
   
         <li class="breadcrumb-item active">Mengubah Daftar Slide Gambar Utama</li>
