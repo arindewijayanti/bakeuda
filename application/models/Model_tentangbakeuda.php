@@ -11,7 +11,7 @@ class Model_tentangbakeuda extends CI_Model {
 	function Tampiltentangbakeuda() 
     {
 		$this->db->order_by('id_tentangbakeuda');
-		$this->db->where('id_tentangbakeuda !=','3');
+		$this->db->where('judul !=','Struktur');
         return $this->db->from('tbl_tentangbakeuda')
 			->get();
     }

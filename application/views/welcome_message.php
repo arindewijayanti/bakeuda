@@ -88,7 +88,7 @@ $this->load->view('include/header');
             <div class="row">
                 <div class="col-lg-12 text-center mb-70">
                     <div class="section-title">
-                        <h4>Galeri Kegiatan Bakeuda</h4>
+                        <h4><a href="<?php echo base_url('galeri')?>">Galeri Kegiatan Bakeuda</a></h4>
                     </div>
                 </div>
             </div>
@@ -97,44 +97,37 @@ $this->load->view('include/header');
                     <div class="project-carousel owl-carousel text-center">
                         <div class="single-project project-bg-1">
                             <div class="project-inner">
-                                <h5><a href="#">Business Growth Solutions</a></h5>
-                                <p><a href="#">Finance</a>,<a href="#"> Marketing</a></p>
+                                <h5><?= $galeri1->judul?></h5>
                             </div>
                         </div>
                         <div class="single-project project-bg-2">
                             <div class="project-inner">
-                                <h5><a href="#">Business Growth Solutions</a></h5>
-                                <p><a href="#">Finance</a>,<a href="#"> Marketing</a></p>
+                                <h5><?= $galeri2->judul?></h5>
                             </div>
                         </div>
                         <div class="single-project project-bg-3">
                             <div class="project-inner">
-                                <h5><a href="#">Business Growth Solutions</a></h5>
-                                <p><a href="#">Finance</a>,<a href="#"> Marketing</a></p>
+                                <h5><?= $galeri3->judul?></h5>
                             </div>
                         </div>
                         <div class="single-project project-bg-4">
                             <div class="project-inner">
-                                <h5><a href="#">Business Growth Solutions</a></h5>
-                                <p><a href="#">Finance</a>,<a href="#"> Marketing</a></p>
+                                <h5><?= $galeri4->judul?></h5>
                             </div>
                         </div>
                         <div class="single-project project-bg-5">
                             <div class="project-inner">
-                                <h5><a href="#">Business Growth Solutions</a></h5>
-                                <p><a href="#">Finance</a>,<a href="#"> Marketing</a></p>
+                                <h5><?= $galeri5->judul?></h5>
                             </div>
                         </div>
                         <div class="single-project project-bg-6">
                             <div class="project-inner">
-                                <h5><a href="#">Business Growth Solutions</a></h5>
-                                <p><a href="#">Finance</a>,<a href="#"> Marketing</a></p>
+                                <h5><?= $galeri6->judul?></h5>
                             </div>
                         </div>
                         <div class="single-project project-bg-7">
                             <div class="project-inner">
-                                <h5><a href="#">Business Growth Solutions</a></h5>
-                                <p><a href="#">Finance</a>,<a href="#"> Marketing</a></p>
+                                <h5><?= $galeri7->judul?></h5>
                             </div>
                         </div>
                     </div>
