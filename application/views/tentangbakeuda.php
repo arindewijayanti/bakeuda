@@ -8,7 +8,7 @@ $this->load->view('include/header');
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-title">
-                        <h4>TENTANG BAKEUDA</h4>
+                        <h4>TENTANG KAMI</h4>
                     </div>
                 </div>
             </div>
@@ -22,15 +22,15 @@ $this->load->view('include/header');
                 <div class="col-md-6 col-12 text-center d-flex align-items-center">
                     <div class="hire-us-content">
                         <div class="section-title">
-                            <h4>SULAIMAN LUBIS, S.E</h4>
+                            <h4><?= $profil->nama ?></h4>
                         </div>
-                        <p>We’ve completed more than <span>100+</span>project for our am azing clients, If you interested?</p>
+                        <p><?= $profil->jabatan ?></p>
               
                     </div>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
                     <div class="hire-us-img">
-                        <img src="<?php echo base_url()?>assets/img/hire_us.png" alt="">
+                        <img src="<?php echo base_url('uploads/')?><?= $profil->nama_berkas ?>" width="500px" alt="">
                     </div>
                 </div>
             </div>

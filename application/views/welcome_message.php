@@ -169,22 +169,22 @@ $this->load->view('include/header');
         </div>
     </div>
     <!-- End Why Choose Us Area -->
-    <!-- Start Working With Us Area -->
-    <div class="working-with-us-area gray-bg">
+         <!-- Start Working With Us Area -->
+         <div class="working-with-us-area gray-bg">
         <div class="container"> 
             <div class="row">
                 <div class="col-md-6 col-12 text-center d-flex align-items-center">
                     <div class="hire-us-content">
                         <div class="section-title">
-                            <h4>SULAIMAN LUBIS, S.E</h4>
+                            <h4><?= $profil->nama ?></h4>
                         </div>
-                        <p>We’ve completed more than <span>100+</span>project for our am azing clients, If you interested?</p>
-                        <a href="<?php echo base_url()?>welcome/tentangbakeuda" class="btn hire-us-btn">Struktur Organisasi</a>
+                        <p><?= $profil->jabatan ?></p>
+              
                     </div>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
                     <div class="hire-us-img">
-                        <img src="<?php echo base_url()?>assets/img/hire_us.png" alt="">
+                        <img src="<?php echo base_url('uploads/')?><?= $profil->nama_berkas ?>" width="500px" alt="">
                     </div>
                 </div>
             </div>

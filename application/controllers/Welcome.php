@@ -39,9 +39,13 @@ class Welcome extends CI_Controller {
 		$data['bangunanbakeuda3'] = $this->db->get_where('tbl_bangunanbakeuda',['id_bangunanbakeuda'=>'3'])->row();
 
 		
+		$data['profil'] = $this->db->get_where('tbl_profil',['id_profil'=>'1'])->row();
+		
 		$data['videoutama'] = $this->db->get_where('tbl_video',['id_video'=>'1'])->row();
 		$data['videopendukung1'] = $this->db->get_where('tbl_video',['id_video'=>'2'])->row();
 		$data['videopendukung2'] = $this->db->get_where('tbl_video',['id_video'=>'3'])->row();
+
+		
 
 	
 		$this->load->view('welcome_message',$data);
@@ -52,6 +56,7 @@ class Welcome extends CI_Controller {
 		$data['visi'] = $this->db->get_where('tbl_tentangbakeuda',['judul'=>'Visi'])->row();
 		$data['misi'] = $this->db->get_where('tbl_tentangbakeuda',['judul'=>'Misi'])->row();
 		$data['struktur'] = $this->db->get_where('tbl_tentangbakeuda',['judul'=>'Struktur'])->row();
+		$data['profil'] = $this->db->get_where('tbl_profil',['id_profil'=>'1'])->row();
 
 		$this->load->view('tentangbakeuda',$data);
 	}

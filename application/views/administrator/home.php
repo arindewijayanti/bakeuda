@@ -64,7 +64,7 @@ $this->load->view('administrator/header');
                             <a href="#"><i class="fas fa-pencil-alt"></i></a>
                         </div>
                         <div class="item-content">
-                            <h6><a href="#">Profil Kepala Dinas</a></h6>
+                            <h6><a href="<?php echo base_url('administrator/profil')?>">Profil Kepala Dinas</a></h6>
                             <p>Pengaturan Profil Kepala Dinas</p>
                         </div>
                     </div>

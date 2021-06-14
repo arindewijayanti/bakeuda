@@ -11,6 +11,7 @@ class Administrator extends CI_Controller {
 		$this->load->model('model_login');
 		$this->load->model('model_download');
 		$this->load->model('model_bangunanbakeuda');
+		$this->load->model('model_profil');
 		$this->load->model('model_slidegambarutama');
 		$this->load->model('model_tentangbakeuda');
 		$this->load->model('model_video');
@@ -324,6 +325,48 @@ class Administrator extends CI_Controller {
 			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil dihapus</div>');
 			redirect('administrator/strukturorganisasi','refresh');
 	}
+
+	public function profil()
+	{
+        $data['content'] = $this->model_profil->Tampilprofil();
+		$this->load->view('administrator/profil',$data);
+	}
+
+	public function profiledit($id_profil = NULL)
+	{
+		$this->db->where('id_profil', $id_profil);
+		$data['content'] = $this->db->get('tbl_profil');
+		$this->load->view('administrator/profiledit', $data);
+	}
+
+	public function action_profilupdate()
+	{
+
+		$config['upload_path']          = './uploads/';
+		$config['allowed_types']        = 'jpg|jpeg|png';
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		if ( ! $this->upload->do_upload('berkas'))
+		{
+				$error = array('error' => $this->upload->display_errors());
+				$this->load->view('administrator/profil', $error);
+		}
+		else
+		{
+			
+			$id_profil = $this->input->post('id_profil');
+			$data['nama_berkas'] = $this->upload->data("file_name");
+			$data['nama'] = $this->input->post('nama');
+			$data['jabatan'] = $this->input->post('jabatan');
+			$this->db->where('id_profil', $id_profil);
+			$this->db->update('tbl_profil',$data);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
+			redirect('administrator/profil');
+		}
+
+
+	}
+
 
 	
 

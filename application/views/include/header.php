@@ -77,7 +77,8 @@
                             <nav class="menu-wrapper">
                             <ul class="main-menu">
                                 <b><li class="active"><a href="<?php echo base_url()?>">Beranda</a></li></b>
-                                <b><li><a href="<?php echo base_url('welcome/tentangbakeuda')?>">BAKEUDA</a></b> </li>
+                                <b><li><a href="<?php echo base_url('welcome/tentangbakeuda')?>">Tentang Kami</a></b> </li>
+                                <b><li><a href="<?php echo base_url('welcome/informasi')?>">Informasi</a></li></b>
                                 <b><li><a href="<?php echo base_url('welcome/download')?>">Download</a></li></b>
                                 <b><li><a href="<?php echo base_url('welcome/situsterkait')?>">Situs Terkait</a></li></b>
                             </ul>
