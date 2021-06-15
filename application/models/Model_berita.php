@@ -10,14 +10,14 @@ class Model_berita extends CI_Model {
 
 	function Tampilberita() 
     {
-		$this->db->order_by('keterangan_berkas');
+		$this->db->order_by('tanggal');
         return $this->db->from('tbl_berita')
 			->get();
     }
 
-	public function deleteberita($id_strukturorganisasi)
+	public function deleteberita($id_berita)
 	{
-		$this->db->where('id_strukturorganisasi', $id_strukturorganisasi);
+		$this->db->where('id_berita', $id_berita);
 		$this->db->delete('tbl_berita');
 	}
 

@@ -117,7 +117,7 @@ class Administrator extends CI_Controller {
 	public function action_beritaadd()
 	{
 		$config['upload_path']          = './uploads/';
-		$config['allowed_types']        = 'gif|jpg|jpeg|png|pdf';
+		$config['allowed_types']        = 'jpg|jpeg|png';
 		$this->load->library('upload', $config);
 		$this->upload->initialize($config);
 		if ( ! $this->upload->do_upload('berkas'))
@@ -128,7 +128,8 @@ class Administrator extends CI_Controller {
 		else
 		{
 			$data['nama_berkas'] = $this->upload->data("file_name");
-			$data['keterangan_berkas'] = $this->input->post('keterangan_berkas');
+			$data['judul'] = $this->input->post('judul');
+			$data['isi'] = $this->input->post('isi');
 			$this->db->insert('tbl_berita',$data);
 			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
 			redirect('administrator/berita');
