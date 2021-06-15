@@ -200,80 +200,31 @@ $this->load->view('include/header');
                     <div class="section-title">
                         <h4>Berita Terbaru</h4>
                     </div>
-                    <div class="blog-carousel owl-carousel">
-                        <div class="single-blog-item">
+                    
+                  <div class="blog-carousel owl-carousel">
+                    <?php 
+                  foreach ($sepuluhberita->result() as $data) : ?>
+                  
+                  <div class="single-blog-item">
                             <div class="single-blog-img">
-                                <img src="<?php echo base_url()?>administrator/berita" alt="">
-                                <span>October 25, 2017</span>
+                                <img src="<?php echo base_url('uploads/'.$data->nama_berkas)?>" alt="">
+                                <span><?php echo $data->tanggal?></span>
                             </div>
                             <div class="blog-content">
-                                <h5 class="post-heading"><a href="#">10 Tips for a Business Strong Start</a> </h5>
-                                <p class="post-content-text">Donec sit amet neque lectus. Ut vitae turpis justo. Nullam a sodales est, at viverra sem. Mauris vitae pellentesque nisi, sit amet viverra orci.</p>
+                                <h5 class="post-heading"><a href="#"><?php echo $data->judul?> </a> </h5>
+                                <p class="post-content-text"><?php echo substr($data->isi,0,144)?> </p>
                                 <div class="blog-btn">
-                                    <div class="blog-tags">
-                                        <i class="fas fa-tags"></i>
-                                        <a href="#">Development</a>,
-                                        <a href="#">Maketing</a>
-                                    </div>
-                                    <a href="#" class="btn btn-inline read-more-btn"><i class="fas fa-plus-square"></i>Read More</a>
+                                    <a href="<?php echo base_url('welcome/baca/'.$data->id_berita)?>" class="btn btn-inline read-more-btn"><i class="fas fa-plus-square"></i>Baca Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="single-blog-item">
-                            <div class="single-blog-img">
-                                <img src="<?php echo base_url()?>uploads/03940cb9e46f5e4d8d5fa3c9f3ba56fc.jpg" alt="">
-                                <span>October 25, 2017</span>
-                            </div>
-                            <div class="blog-content">
-                                <h5 class="post-heading"><a href="#">10 Tips for a Business Strong Start</a> </h5>
-                                <p class="post-content-text">Donec sit amet neque lectus. Ut vitae turpis justo. Nullam a sodales est, at viverra sem. Mauris vitae pellentesque nisi, sit amet viverra orci.</p>
-                                <div class="blog-btn">
-                                    <div class="blog-tags">
-                                        <i class="fas fa-tags"></i>
-                                        <a href="#">Development</a>,
-                                        <a href="#">Maketing</a>
-                                    </div>
-                                    <a href="#" class="btn btn-inline read-more-btn"><i class="fas fa-plus-square"></i>Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-blog-item">
-                            <div class="single-blog-img">
-                                <img src="<?php echo base_url()?>assets/img/blog_03.jpg" alt="">
-                                <span>October 25, 2017</span>
-                            </div>
-                            <div class="blog-content">
-                                <h5 class="post-heading"><a href="#">10 Tips for a Business Strong Start</a> </h5>
-                                <p class="post-content-text">Donec sit amet neque lectus. Ut vitae turpis justo. Nullam a sodales est, at viverra sem. Mauris vitae pellentesque nisi, sit amet viverra orci.</p>
-                                <div class="blog-btn">
-                                    <div class="blog-tags">
-                                        <i class="fas fa-tags"></i>
-                                        <a href="#">Development</a>,
-                                        <a href="#">Maketing</a>
-                                    </div>
-                                    <a href="#" class="btn btn-inline read-more-btn"><i class="fas fa-plus-square"></i>Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-blog-item">
-                            <div class="single-blog-img">
-                                <img src="<?php echo base_url()?>assets/img/blog_04.jpg" alt="">
-                                <span>October 25, 2017</span>
-                            </div>
-                            <div class="blog-content">
-                                <h5 class="post-heading"><a href="#">10 Tips for a Business Strong Start</a> </h5>
-                                <p class="post-content-text">Donec sit amet neque lectus. Ut vitae turpis justo. Nullam a sodales est, at viverra sem. Mauris vitae pellentesque nisi, sit amet viverra orci.</p>
-                                <div class="blog-btn">
-                                    <div class="blog-tags">
-                                        <i class="fas fa-tags"></i>
-                                        <a href="#">Development</a>,
-                                        <a href="#">Maketing</a>
-                                    </div>
-                                    <a href="#" class="btn btn-inline read-more-btn"><i class="fas fa-plus-square"></i>Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                        
+             <?php
+                    endforeach;
+                ?>
+                        
                     </div>
+                        
                 </div>
                 <div class="col-lg-6">
                    

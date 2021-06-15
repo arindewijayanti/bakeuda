@@ -97,7 +97,7 @@ $this->load->view('include/header');
             </div>
     <!-- End Icon Box Area -->
     
-                <?php 
+            <?php 
                   foreach ($galeritambahan as $data) : ?>
                   <img class="img-gallery" src="<?php echo base_url('uploads/'.$data->nama_berkas)?>" alt="asda">
              <?php

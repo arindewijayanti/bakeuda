@@ -11,6 +11,7 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_login');
 		$this->load->model('model_download');
 		$this->load->model('model_informasi');
+		$this->load->model('model_berita');
 		$this->load->library('session');
 	}
 
@@ -54,10 +55,8 @@ class Welcome extends CI_Controller {
 		$data['galeri6'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'6'])->row();
 		$data['galeri7'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'7'])->row();
 
+		$data['sepuluhberita'] = $this->model_berita->Tampilsepuluhberita();
 
-		
-
-	
 		$this->load->view('welcome_message',$data);
 	}
 
@@ -93,5 +92,11 @@ class Welcome extends CI_Controller {
 	{
 		$data = $this->db->get_where('tbl_informasi',['id_informasi'=>$id_informasi])->row();
 		force_download('uploads/'.$data->nama_berkas,NULL);
+	}
+
+	function baca($id_berita)
+	{
+		$data['content'] = $this->model_berita->Tampilberitaid($id_berita);
+		$this->load->view('baca',$data);
 	}
 }
