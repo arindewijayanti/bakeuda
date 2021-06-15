@@ -75,6 +75,9 @@ $this->load->view('include/header');
         </div>
     </div>
     <!-- End Latest Project Area -->
+
+                
+
     <!-- Start Icon Box Area -->
     <div class="icon-box-area pt-70 pb-70" id="feature">
         <div class="container">
@@ -115,6 +118,12 @@ $this->load->view('include/header');
         </div>
     </div>
     <!-- End Icon Box Area -->
+                <?php 
+                  foreach ($galeritambahan as $data) : ?>
+                  <img src="<?php echo base_url('uploads/'.$data->nama_berkas)?>" width="auto" alt="">
+                <?php
+                    endforeach;
+                ?>
     <!-- Start Footer Area -->
     <footer class="footer-area pt-60 pb-60 black-bg" id="contact-us">
         <div class="container">

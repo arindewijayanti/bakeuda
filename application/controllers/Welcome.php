@@ -10,6 +10,7 @@ class Welcome extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->model('model_login');
 		$this->load->model('model_download');
+		$this->load->model('model_informasi');
 		$this->load->library('session');
 	}
 
@@ -79,6 +80,18 @@ class Welcome extends CI_Controller {
 	function action_download($id_download)
 	{
 		$data = $this->db->get_where('tbl_download',['id_download'=>$id_download])->row();
+		force_download('uploads/'.$data->nama_berkas,NULL);
+	}
+
+	public function informasi()
+	{
+        $data['content'] = $this->model_informasi->Tampilinformasi();
+		$this->load->view('informasi',$data);
+	}
+
+	function action_informasi($id_informasi)
+	{
+		$data = $this->db->get_where('tbl_informasi',['id_informasi'=>$id_informasi])->row();
 		force_download('uploads/'.$data->nama_berkas,NULL);
 	}
 }

@@ -10,7 +10,7 @@ $this->load->view('administrator/header');
           <a href="<?php echo base_url('administrator/home')?>">Beranda</a>
         </li>
 
-        <li class="breadcrumb-item active">Daftar File informasi</li>
+        <li class="breadcrumb-item active">Daftar File Informasi</li>
       </ol>
 
       <div class="container">
@@ -20,7 +20,7 @@ $this->load->view('administrator/header');
   <div class="card mb-3">
         <div class="card-header">
         <?php echo $this->session->flashdata('msg'); ?>
-          <i class="fa fa-table"></i> Daftar File informasi</div>
+          <i class="fa fa-table"></i> Daftar File Informasi</div>
         <div class="card-body">
           <div class="table-responsive">
           <table class="table table-bordered" id="example" width="100%" cellspacing="0">

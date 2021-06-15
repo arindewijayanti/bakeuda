@@ -42,32 +42,18 @@
    <script src="<?php echo base_url()?>assets/js/jquery-3.4.1.min.js"></script>
 
 </head>
-<style>
-    li.dropdown {
-		display: inline-block;
-	}
- 
-	.dropdown:hover .isi-dropdown {
-		display: block;
-	}
-.isi-dropdown {
-		position: absolute;
-		display: none;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		z-index: 1;
-		background-color: #f9f9f9;
-	}
-</style>
+
 <body>  
     <!-- Start Header Area -->
     <div>
-        <div class="container">
+        <div>
             <div class="header-wrapper">
                 <div class="row">
-                    <div class="col-lg-14 col-14">
+                    <div class="col-lg-20 col-20">
                             <br>
                             <table>
                             <tr>
+                            <td width="30px"></td>
                             <td><img src="<?php echo base_url('assets/')?>logo.jpg" alt="" width="100"></td>
                             <td>
                             <h4>&nbsp PEMERINTAH KOTA PADANGSIDIMPUAN</h4>

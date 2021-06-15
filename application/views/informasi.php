@@ -1,26 +1,30 @@
 <?php 
-$this->load->view('administrator/header'); 
+$this->load->view('include/header'); 
 ?>
 <BR>
+    <!-- Start Latest Project Area -->
+<div class="latest-project-area black-bg pt-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h4>Informasi</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Latest Project Area -->
+    <BR>
     
     <section id_informasi="services" class="services">
-      <div class="container">
-      <ol class="breadcrumb" >
-        <li class="breadcrumb-item">
-          <a href="<?php echo base_url('administrator/home')?>">Beranda</a>
-        </li>
-
-        <li class="breadcrumb-item active">Daftar File informasi</li>
-      </ol>
 
       <div class="container">
-      <a href="<?php echo base_url('administrator/informasiadd')?>" class="btn btn-primary" style="margin-bottom: 10px;"><i class="fa fa-plus">Tambah Data</a></i>
-  
   <!-- Example DataTables Card-->
   <div class="card mb-3">
         <div class="card-header">
         <?php echo $this->session->flashdata('msg'); ?>
-          <i class="fa fa-table"></i> Daftar File informasi</div>
+          <i class="fa fa-table"></i> Daftar File Informasi</div>
         <div class="card-body">
           <div class="table-responsive">
           <table class="table table-bordered" id="example" width="100%" cellspacing="0">
@@ -40,7 +44,7 @@ $this->load->view('administrator/header');
                   <td><?= $i ?></td>
                   <td align="left"><?= $data->keterangan_berkas ?></td>
                   <td> 
-                    <a href="<?php echo base_url()?>administrator/action_deleteinformasi/<?php echo $data->id_informasi; ?>" onclick="return confirm('Apakah anda yakin?');" class="btn btn-danger">Hapus<i class="fa fa-trash"></i></a>
+                    <a href="<?php echo base_url()?>welcome/action_informasi/<?php echo $data->id_informasi; ?>" class="btn btn-danger">Download</i></a>
                   </td> 
                 </tr>
                     <?php
@@ -56,6 +60,6 @@ $this->load->view('administrator/header');
     </div>
   </div>
 
-<?php 
-$this->load->view('administrator/footer'); 
+<?php
+$this->load->view('include/footer'); 
 ?>

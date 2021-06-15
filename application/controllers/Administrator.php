@@ -10,6 +10,7 @@ class Administrator extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->model('model_login');
 		$this->load->model('model_download');
+		$this->load->model('model_informasi');
 		$this->load->model('model_bangunanbakeuda');
 		$this->load->model('model_profil');
 		$this->load->model('model_galeri');
@@ -440,6 +441,45 @@ class Administrator extends CI_Controller {
 			$this->model_galeri->deletegaleri($id_galeri);
 			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil dihapus</div>');
 			redirect('administrator/galeri','refresh');
+	}
+
+	public function informasi()
+	{
+        $data['content'] = $this->model_informasi->Tampilinformasi();
+		$this->load->view('administrator/informasi',$data);
+	}
+
+	public function informasiadd()
+	{
+        $this->load->view('administrator/informasiadd');
+	}
+
+	public function action_informasiadd()
+	{
+		$config['upload_path']          = './uploads/';
+		$config['allowed_types']        = 'gif|jpg|jpeg|png|pdf';
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		if ( ! $this->upload->do_upload('berkas'))
+		{
+				$error = array('error' => $this->upload->display_errors());
+				$this->load->view('administrator/informasiadd', $error);
+		}
+		else
+		{
+			$data['nama_berkas'] = $this->upload->data("file_name");
+			$data['keterangan_berkas'] = $this->input->post('keterangan_berkas');
+			$this->db->insert('tbl_informasi',$data);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
+			redirect('administrator/informasi');
+		}
+	}
+
+	public function action_deleteinformasi($id_informasi = '')
+	{
+			$this->model_informasi->deleteinformasi($id_informasi);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil dihapus</div>');
+			redirect('administrator/informasi','refresh');
 	}
 	
 
