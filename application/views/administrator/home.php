@@ -86,7 +86,7 @@ $this->load->view('administrator/header');
                             <a href="#"><i class="fas fa-pencil-alt"></i></a>
                         </div>
                         <div class="item-content">
-                            <h6><a href="#">Situs Terkait</a></h6>
+                            <h6><a href="<?php echo base_url('administrator/situsterkait')?>">Situs Terkait</a></h6>
                             <p>Pengaturan Situs Terkait</p>
                         </div>
                     </div>
