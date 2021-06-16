@@ -373,6 +373,61 @@ $this->load->view('include/header');
                     </div>
                 </div>
                
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<hr>
+				<div class="row">
+					<div class="col-6">
+						<p class="lead">Which one is Best CSS Framework</p>
+						<hr>
+						<form action="<?php echo config_item('base_url'); ?>/welcome/submit" method="post" enctype="multipart/form-data">
+							<div>
+								<?php foreach($query->result() as $row){ ?>
+									<div class="form-group">
+										<input name="id" type="radio" aria-valuenow="" class="pollradio" value="<?php echo $row->framework ?>">
+										<?php echo $row->framework ?>
+									</div>
+								<?php } ?>	
+							</div>
+							<br>
+							<button type="submit" name="submit" class="btn btn-primary" id="btn">submit</button>
+						</form>              
+					</div>
+
+					<div class="col-6">
+						<p class="lead">Live Polling Framework CSS</p>
+						<hr>
+
+						<div class="row mb-3">
+							<?php foreach($query->result() as $row){ ?>
+								<div class="col-3 mb-3">
+										<div><?php echo $row->framework ?></div>
+								</div>
+								<div class="col-8">
+									<div class="progress mt-1">
+									  <div class="progress-bar <?php 
+									  if ($row->value>50 && $row->value<100) echo 'bg-success';
+									  else if($row->value >= 100) echo "bg-primary";
+									  else if($row->value < 50) echo "bg-danger";
+
+									  ?>" role="progressbar" style="width: <?php echo $row->value ?>%;" aria-valuenow="<?php echo $row->value ?>" aria-valuemin="0" aria-valuemax="100"><?php echo $row->value ?>% <?php echo $row->value >= 100 ? 'Completed' : 'Uncompleted' ?></div>
+									</div>		
+								</div>
+							<?php } ?>
+						</div>						
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+                    </div>
+                </div>
+               
             </div>
         </div>
     </footer>

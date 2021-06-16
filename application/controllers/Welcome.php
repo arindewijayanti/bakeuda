@@ -10,6 +10,7 @@ class Welcome extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->model('model_login');
 		$this->load->model('model_download');
+		$this->load->model('model_polling');
 		$this->load->library('session');
 	}
 
@@ -53,6 +54,8 @@ class Welcome extends CI_Controller {
 		$data['galeri6'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'6'])->row();
 		$data['galeri7'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'7'])->row();
 
+		$data['query'] = $this->model_polling->Tampilpolling();
+
 
 		
 
@@ -81,4 +84,14 @@ class Welcome extends CI_Controller {
 		$data = $this->db->get_where('tbl_download',['id_download'=>$id_download])->row();
 		force_download('uploads/'.$data->nama_berkas,NULL);
 	}
+
+public function submit()
+    {
+		$id = $this->input->post('id');
+		//$id="Bagus";
+			$this->model_polling->submit($id);
+			redirect('welcome');
+	}
+
 }
+
