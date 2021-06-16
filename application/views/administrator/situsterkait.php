@@ -40,7 +40,7 @@ $this->load->view('administrator/header');
                   foreach ($content->result() as $data) : ?>
                   <td><?= $i ?></td>
                   <td align="left"><?= $data->link_situs ?></td>
-                  <td align="center"><img width="300" height="180" src="<?php echo base_url(); ?>uploads/<?php echo $data->nama_berkas; ?>"/></td>
+                  <td align="center"><img width="150" height="50" src="<?php echo base_url(); ?>uploads/<?php echo $data->nama_berkas; ?>"/></td>
              <td> 
                     <a href="<?php echo base_url()?>administrator/action_deletesitusterkait/<?php echo $data->id_situsterkait; ?>" onclick="return confirm('Apakah anda yakin?');" class="btn btn-danger">Hapus<i class="fa fa-trash"></i></a>
                   </td> 

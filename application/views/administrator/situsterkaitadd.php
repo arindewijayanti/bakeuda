@@ -30,7 +30,7 @@ $this->load->view('administrator/header');
                   </div>
 
                   <div class="col-md-6">
-                    <label for="berkas">Pilih Berkas</label><br>
+                    <label for="berkas">Pilih Berkas (150px * 50px)</label><br>
                     <input type="file" name="berkas" required>
                   </div>
                   

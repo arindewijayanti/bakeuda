@@ -243,36 +243,23 @@ $this->load->view('include/header');
     <div class="brand-area gray-bg pt-70 pb-70">
         <div class="container">
             <div class="brand-carousel owl-carousel">
+                
+                <?php 
+                  foreach ($situsterkait->result() as $data) : ?>
+
                 <div class="brand-item">
                     <div class="brand-item-inner">
-                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/1.png" alt=""></a>
+                        <a href="http://<?=$data->link_situs?>"><img src="<?php echo base_url('uploads/'.$data->nama_berkas)?>" alt="" width="150px" height="50px"></a>
                     </div>
                 </div>
-                <div class="brand-item">
-                    <div class="brand-item-inner">
-                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/2.png" alt=""></a>
+
+
+             <?php
+                    endforeach;
+                ?>
+                        
                     </div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-item-inner">
-                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/3.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-item-inner">
-                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/4.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-item-inner">
-                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/5.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-item-inner">
-                        <a href="#"><img src="<?php echo base_url()?>assets/img/brands/6.png" alt=""></a>
-                    </div>
-                </div>
+              
             </div>
         </div>
     </div>
