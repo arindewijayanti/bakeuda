@@ -10,6 +10,7 @@ class Welcome extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->model('model_login');
 		$this->load->model('model_download');
+		$this->load->model('model_situsterkait');
 		$this->load->model('model_polling');
 		$this->load->model('model_informasi');
 		$this->load->model('model_berita');
@@ -59,6 +60,8 @@ class Welcome extends CI_Controller {
 		$data['query'] = $this->model_polling->Tampilpolling();
 
 		$data['sepuluhberita'] = $this->model_berita->Tampilsepuluhberita();
+
+		$data['situsterkait'] = $this->model_situsterkait->Tampilsitusterkait();
 
 		$this->load->view('welcome_message',$data);
 	}
