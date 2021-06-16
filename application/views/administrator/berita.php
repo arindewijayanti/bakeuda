@@ -45,7 +45,7 @@ $this->load->view('administrator/header');
                   <td align="left"><?= $data->judul ?></td>
                   <td align="center"><img width="300" height="180" src="<?php echo base_url(); ?>uploads/<?php echo $data->nama_berkas; ?>"/></td>
                   <td> 
-                    <a href="<?php echo base_url()?>administrator/action_updateberita/<?php echo $data->id_berita; ?>" class="btn btn-danger">Edit<i class="fa fa-edit"></i></a>
+                    <a href="<?php echo base_url()?>administrator/action_beritaedit/<?php echo $data->id_berita; ?>" class="btn btn-danger">Edit<i class="fa fa-edit"></i></a>
                     <a href="<?php echo base_url()?>administrator/action_deleteberita/<?php echo $data->id_berita; ?>" onclick="return confirm('Apakah anda yakin?');" class="btn btn-danger">Hapus<i class="fa fa-trash"></i></a>
                   </td> 
                 </tr>

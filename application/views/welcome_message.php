@@ -211,7 +211,7 @@ $this->load->view('include/header');
                                 <span><?php echo $data->tanggal?></span>
                             </div>
                             <div class="blog-content">
-                                <h5 class="post-heading"><a href="#"><?php echo $data->judul?> </a> </h5>
+                                <h5 class="post-heading"><a href="#"><?php echo substr($data->judul,0,20)?> </a> </h5>
                                 <p class="post-content-text"><?php echo substr($data->isi,0,144)?> </p>
                                 <div class="blog-btn">
                                     <a href="<?php echo base_url('welcome/baca/'.$data->id_berita)?>" class="btn btn-inline read-more-btn"><i class="fas fa-plus-square"></i>Baca Selengkapnya</a>

@@ -10,17 +10,17 @@ $this->load->view('administrator/header');
           <a href="<?php echo base_url('administrator/home')?>">Beranda</a>
         </li>
 
-        <li class="breadcrumb-item active">Daftar File informasi</li>
+        <li class="breadcrumb-item active">Daftar File Download</li>
       </ol>
 
       <div class="container">
-      <a href="<?php echo base_url('administrator/informasiadd')?>" class="btn btn-primary" style="margin-bottom: 10px;"><i class="fa fa-plus">Tambah Data</a></i>
+      <a href="<?php echo base_url('administrator/downloadadd')?>" class="btn btn-primary" style="margin-bottom: 10px;"><i class="fa fa-plus">Tambah Data</a></i>
   
   <!-- Example DataTables Card-->
   <div class="card mb-3">
         <div class="card-header">
         <?php echo $this->session->flashdata('msg'); ?>
-          <i class="fa fa-table"></i> Daftar File informasi</div>
+          <i class="fa fa-table"></i> Daftar File Download</div>
         <div class="card-body">
           <div class="table-responsive">
           <table class="table table-bordered" id="example" width="100%" cellspacing="0">
@@ -40,7 +40,7 @@ $this->load->view('administrator/header');
                   <td><?= $i ?></td>
                   <td align="left"><?= $data->keterangan_berkas ?></td>
                   <td> 
-                    <a href="<?php echo base_url()?>administrator/action_deleteinformasi/<?php echo $data->id_informasi; ?>" onclick="return confirm('Apakah anda yakin?');" class="btn btn-danger">Hapus<i class="fa fa-trash"></i></a>
+                    <a href="<?php echo base_url()?>administrator/action_deletedownload/<?php echo $data->id_download; ?>" onclick="return confirm('Apakah anda yakin?');" class="btn btn-danger">Hapus<i class="fa fa-trash"></i></a>
                   </td> 
                 </tr>
                     <?php

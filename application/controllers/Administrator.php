@@ -136,6 +136,31 @@ class Administrator extends CI_Controller {
 		}
 	}
 
+	public function action_beritaedit($id_berita = '')
+	{
+		$data['content'] = $this->model_berita->Tampilberitaedit($id_berita);
+        $this->load->view('administrator/beritaedit',$data);
+	}
+
+	public function beritaedit()
+	{
+		$id_berita = $this->input->post('id_berita');
+		$config['upload_path']          = './uploads/';
+		$config['allowed_types']        = 'jpg|jpeg|png';
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		if ($this->upload->do_upload('berkas')) {
+			$data['nama_berkas'] = $this->upload->data("file_name");
+		}
+		
+			$data['judul'] = $this->input->post('judul');
+			$data['isi'] = $this->input->post('isi');
+			$this->db->where('id_berita',$id_berita);
+			$this->db->update('tbl_berita',$data);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">File berhasil di Upload</div>');
+			redirect('administrator/berita');
+	}
+
 	public function action_deleteberita($id_strukturorganisasi = '')
 	{
 			$this->model_berita->deleteberita($id_strukturorganisasi);
