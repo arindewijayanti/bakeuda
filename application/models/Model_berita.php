@@ -29,6 +29,15 @@ class Model_berita extends CI_Model {
     }
 
 	
+
+	function Tampilberitaedit($id_berita) 
+    {
+		$this->db->where('id_berita', $id_berita);
+        return $this->db->from('tbl_berita')
+			->get()->row();
+    }
+
+	
 	function Tampilberitaid($id_berita) 
     {
 		$this->db->where('id_berita' ,$id_berita);
