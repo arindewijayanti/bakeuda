@@ -44,13 +44,14 @@
 <body>  
     <!-- Start Header Area -->
     <div>
-        <div class="container">
+        <div>
             <div class="header-wrapper">
                 <div class="row">
-                    <div class="col-lg-14 col-14">
+                    <div class="col-lg-20 col-20">
                             <br>
                             <table>
                             <tr>
+                            <td width="30px"></td>
                             <td><img src="<?php echo base_url('assets/')?>logo.jpg" alt="" width="100"></td>
                             <td>
                             <h4>&nbsp HALAMAN ADMINISTRATOR</h4>

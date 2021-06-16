@@ -53,6 +53,9 @@ class Galeri extends CI_Controller {
 		$data['galeri6'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'6'])->row();
 		$data['galeri7'] = $this->db->get_where('tbl_galeri',['id_galeri'=>'7'])->row();
 
+		
+		$data['galeritambahan'] = $this->db->get_where('tbl_galeri',['id_galeri >='=>'8'])->result();
+
 
 		
 

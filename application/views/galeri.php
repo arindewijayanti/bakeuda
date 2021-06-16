@@ -17,6 +17,15 @@ $this->load->view('include/header');
 .project-bg-5 {background-image: url(<?php echo base_url()?>uploads/<?= $galeri5->nama_berkas ?>);}
 .project-bg-6 {background-image: url(<?php echo base_url()?>uploads/<?= $galeri6->nama_berkas ?>);}
 .project-bg-7 {background-image: url(<?php echo base_url()?>uploads/<?= $galeri7->nama_berkas ?>);}
+
+.img-gallery {
+     width: 510px;
+     height: 310px;
+     border: 4px #575D63;
+     padding: 5px;
+     margin: 20px;
+     align: center;
+   }
 </style>
     <br>
     
@@ -75,46 +84,28 @@ $this->load->view('include/header');
         </div>
     </div>
     <!-- End Latest Project Area -->
+
+                
+
     <!-- Start Icon Box Area -->
     <div class="icon-box-area pt-70 pb-70" id="feature">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-icon-box icon-box-img-1">
-                        <div class="icon-box-content">
-                            <h6 class="iconbox-content-heading"><i class="far fa-chart-bar"></i> <?= $bangunanbakeuda1->judul ?></h6>
-                            <div class="iconbox-content-body">
-                                <p><?= $bangunanbakeuda1->keterangan ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-icon-box icon-box-img-2">
-                        <div class="icon-box-content">
-                            <h6 class="iconbox-content-heading"><i class="fas fa-cogs"></i><?= $bangunanbakeuda2->judul ?></h6>
-                            <div class="iconbox-content-body">
-                                <p><?= $bangunanbakeuda2->keterangan ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-icon-box icon-box-img-3">
-                        <div class="icon-box-content">
-                            <h6 class="iconbox-content-heading"><i class="fas fa-chart-line"></i><?= $bangunanbakeuda3->judul ?></h6>
-                            <div class="iconbox-content-body">
-                                <p><?= $bangunanbakeuda3->keterangan ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
                     
             </div>
+    <!-- End Icon Box Area -->
+    
+            <?php 
+                  foreach ($galeritambahan as $data) : ?>
+                  <img class="img-gallery" src="<?php echo base_url('uploads/'.$data->nama_berkas)?>" alt="asda">
+             <?php
+                    endforeach;
+                ?>
+                
         </div>
     </div>
-    <!-- End Icon Box Area -->
     <!-- Start Footer Area -->
     <footer class="footer-area pt-60 pb-60 black-bg" id="contact-us">
         <div class="container">

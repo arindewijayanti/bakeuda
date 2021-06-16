@@ -3,7 +3,7 @@ $this->load->view('administrator/header');
 ?>
 <BR>
     
-    <section id_strukturorganisasi="services" class="services">
+    <section id_berita="services" class="services">
       <div class="container">
       <ol class="breadcrumb" >
         <li class="breadcrumb-item">
@@ -29,7 +29,9 @@ $this->load->view('administrator/header');
             
                 <tr class="text-center">
                   <th>No</th>
-                  <th>Nama File</th>    
+                  <th>Tanggal</th>    
+                  <th>Judul</th>    
+                  <th>Gambar</th>    
                   <th>Opsi</th>
                 </tr>
               </thead>
@@ -39,9 +41,12 @@ $this->load->view('administrator/header');
                   $i = 1;
                   foreach ($content->result() as $data) : ?>
                   <td><?= $i ?></td>
-                  <td align="left"><?= $data->keterangan_berkas ?></td>
+                  <td align="left"><?= $data->tanggal ?></td>
+                  <td align="left"><?= $data->judul ?></td>
+                  <td align="center"><img width="300" height="180" src="<?php echo base_url(); ?>uploads/<?php echo $data->nama_berkas; ?>"/></td>
                   <td> 
-                    <a href="<?php echo base_url()?>administrator/action_deleteberita/<?php echo $data->id_strukturorganisasi; ?>" onclick="return confirm('Apakah anda yakin?');" class="btn btn-danger">Hapus<i class="fa fa-trash"></i></a>
+                    <a href="<?php echo base_url()?>administrator/action_updateberita/<?php echo $data->id_berita; ?>" class="btn btn-danger">Edit<i class="fa fa-edit"></i></a>
+                    <a href="<?php echo base_url()?>administrator/action_deleteberita/<?php echo $data->id_berita; ?>" onclick="return confirm('Apakah anda yakin?');" class="btn btn-danger">Hapus<i class="fa fa-trash"></i></a>
                   </td> 
                 </tr>
                     <?php

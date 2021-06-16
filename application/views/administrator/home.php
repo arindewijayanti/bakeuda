@@ -126,6 +126,18 @@ $this->load->view('administrator/header');
                     </div>
                 </div>
 
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="<?php echo base_url('administrator/informasi')?>">Informasi</a></h6>
+                            <p>Pengaturan Informasi</p>
+                        </div>
+                    </div>
+                </div>
+
                
             </div>
         </div>

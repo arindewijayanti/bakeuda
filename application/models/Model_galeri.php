@@ -8,9 +8,18 @@ class Model_galeri extends CI_Model {
 		$this->load->library('session');
 	}
 
-	function Tampilgaleri() 
+	function Tampilgaleriutama() 
     {
 		$this->db->order_by('id_galeri');
+		$this->db->where('id_galeri <=', '7');
+        return $this->db->from('tbl_galeri')
+			->get();
+    }
+
+	function Tampilgaleritambahan() 
+    {
+		$this->db->order_by('id_galeri');
+		$this->db->where('id_galeri >=', '8');
         return $this->db->from('tbl_galeri')
 			->get();
     }

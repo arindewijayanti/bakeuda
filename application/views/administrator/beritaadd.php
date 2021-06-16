@@ -1,6 +1,15 @@
 <?php 
 $this->load->view('administrator/header'); 
 ?>
+<style>
+textarea {
+    width: 800px;
+    height: 500px;
+}
+.judul {
+    width: 800px;
+}
+</style>
 <BR>
     
     
@@ -32,8 +41,10 @@ $this->load->view('administrator/header');
      <form method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>administrator/action_beritaadd">
             <div>Berkas : </div>
         	<div><input type="file" name="berkas"></div>
+          <div>Judul</div>
+        	<div><input class="judul" type="text" name="judul"></div>
             <div>Keterangan : </div>
-            <div><textarea name="keterangan_berkas"></textarea></div>
+            <div><textarea name="isi" ></textarea></div>
             <div><input type="submit" value="Simpan"/></div>
         </form>
     
