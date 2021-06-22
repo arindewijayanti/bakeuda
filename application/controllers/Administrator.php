@@ -20,6 +20,7 @@ class Administrator extends CI_Controller {
 		$this->load->model('model_video');
 		$this->load->model('model_berita');
 		$this->load->library('session');
+		
 	}
 
 	public function index()
@@ -68,6 +69,11 @@ class Administrator extends CI_Controller {
 	{
         $data['content'] = $this->model_download->Tampildownload();
 		$this->load->view('administrator/download',$data);
+		$roleid=$this->session->userdata('username');
+		if(empty($roleid))
+		{
+			redirect('administrator');
+		}
 	}
 
 	public function downloadadd()
@@ -108,13 +114,19 @@ class Administrator extends CI_Controller {
 	{
         $data['content'] = $this->model_berita->Tampilberita();
 		$this->load->view('administrator/berita',$data);
+		$roleid=$this->session->userdata('username');
+		if(empty($roleid))
+		{
+			redirect('administrator');
+		}
+		
+
 	}
 
 	public function beritaadd()
 	{
         $this->load->view('administrator/beritaadd');
 	}
-
 	public function action_beritaadd()
 	{
 		$config['upload_path']          = './uploads/';
@@ -173,7 +185,13 @@ class Administrator extends CI_Controller {
 	{
         $data['content'] = $this->model_slidegambarutama->Tampilslidegambarutama();
 		$this->load->view('administrator/slidegambarutama',$data);
-	}
+		$roleid=$this->session->userdata('username');
+		if(empty($roleid))
+		{
+			redirect('administrator');
+		}
+		
+			}
 
 	public function slidegambarutamaedit($id_slidegambarutama = NULL)
 	{
@@ -209,6 +227,11 @@ class Administrator extends CI_Controller {
 	{
         $data['content'] = $this->model_video->Tampilvideo();
 		$this->load->view('administrator/video',$data);
+		$roleid=$this->session->userdata('username');
+		if(empty($roleid))
+		{
+			redirect('administrator');
+		}
 	}
 
 	public function videoadd()
@@ -243,6 +266,11 @@ class Administrator extends CI_Controller {
 	{
         $data['content'] = $this->model_bangunanbakeuda->Tampilbangunanbakeuda();
 		$this->load->view('administrator/bangunanbakeuda',$data);
+		$roleid=$this->session->userdata('username');
+		if(empty($roleid))
+		{
+			redirect('administrator');
+		}
 	}
 
 	public function bangunanbakeudaedit($id_bangunanbakeuda = NULL)
@@ -285,6 +313,11 @@ class Administrator extends CI_Controller {
         $data['content'] = $this->model_tentangbakeuda->Tampiltentangbakeuda();
         $data['struktur'] = $this->model_tentangbakeuda->Tampiltentangbakeudastruktur();
 		$this->load->view('administrator/tentangbakeuda',$data);
+		$roleid=$this->session->userdata('username');
+		if(empty($roleid))
+		{
+			redirect('administrator');
+		}
 	}
 
 	public function tentangbakeudaadd()
@@ -318,6 +351,11 @@ class Administrator extends CI_Controller {
 	{
         $data['content'] = $this->model_tentangbakeuda->Tampiltentangbakeudastruktur();
 		$this->load->view('administrator/strukturorganisasi',$data);
+		$roleid=$this->session->userdata('username');
+		if(empty($roleid))
+		{
+			redirect('administrator');
+		}
 	}
 
 	public function strukturorganisasiadd()
@@ -357,6 +395,11 @@ class Administrator extends CI_Controller {
 	{
         $data['content'] = $this->model_profil->Tampilprofil();
 		$this->load->view('administrator/profil',$data);
+		$roleid=$this->session->userdata('username');
+		if(empty($roleid))
+		{
+			redirect('administrator');
+		}
 	}
 
 	public function profiledit($id_profil = NULL)
@@ -399,6 +442,11 @@ class Administrator extends CI_Controller {
         $data['contentutama'] = $this->model_galeri->Tampilgaleriutama();
         $data['contenttambahan'] = $this->model_galeri->Tampilgaleritambahan();
 		$this->load->view('administrator/galeri',$data);
+		$roleid=$this->session->userdata('username');
+		if(empty($roleid))
+		{
+			redirect('administrator');
+		}
 	}
 
 	public function galeriedit($id_galeri = NULL)
@@ -474,6 +522,11 @@ class Administrator extends CI_Controller {
 	{
         $data['content'] = $this->model_informasi->Tampilinformasi();
 		$this->load->view('administrator/informasi',$data);
+		$roleid=$this->session->userdata('username');
+		if(empty($roleid))
+		{
+			redirect('administrator');
+		}
 	}
 
 	public function informasiadd()
@@ -514,6 +567,11 @@ class Administrator extends CI_Controller {
 	{
         $data['content'] = $this->model_situsterkait->Tampilsitusterkait();
 		$this->load->view('administrator/situsterkait',$data);
+		$roleid=$this->session->userdata('username');
+		if(empty($roleid))
+		{
+			redirect('administrator');
+		}
 	}
 
 	public function situsterkaitadd()
