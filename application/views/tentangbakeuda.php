@@ -30,7 +30,8 @@ $this->load->view('include/header');
                 </div>
                 <div class="col-md-6 d-none d-md-block">
                     <div class="hire-us-img">
-                         src="<?php echo base_url('uploads/')?><?= $profil->nama_berkas ?>" width="500px" alt="">
+                        <img src="<?php echo base_url('uploads/')?><?= $profil->nama_berkas ?>" width="500px" alt="">
+
                     </div>
                 </div>
             </div>
