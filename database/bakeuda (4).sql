@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Jun 2021 pada 16.19
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.2.30
+-- Generation Time: Jun 27, 2021 at 07:37 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `polling`
+-- Table structure for table `polling`
 --
 
 CREATE TABLE `polling` (
@@ -34,7 +34,7 @@ CREATE TABLE `polling` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `polling`
+-- Dumping data for table `polling`
 --
 
 INSERT INTO `polling` (`id`, `framework`, `value`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `polling` (`id`, `framework`, `value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_akun`
+-- Table structure for table `tbl_akun`
 --
 
 CREATE TABLE `tbl_akun` (
@@ -57,10 +57,13 @@ CREATE TABLE `tbl_akun` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_akun`
+-- Dumping data for table `tbl_akun`
 --
 
 INSERT INTO `tbl_akun` (`username`, `password`, `nama`, `level`) VALUES
+('arin', 'arin', 'arin\r\n', 'admin'),
+('yulia', 'yulia', 'yulia', 'admin'),
+('nadira', 'nadira', 'nadira', 'admin'),
 ('arin', 'arin', 'arin\r\n', 'admin'),
 ('yulia', 'yulia', 'yulia', 'admin'),
 ('nadira', 'nadira', 'nadira', 'admin');
@@ -68,7 +71,7 @@ INSERT INTO `tbl_akun` (`username`, `password`, `nama`, `level`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_bangunanbakeuda`
+-- Table structure for table `tbl_bangunanbakeuda`
 --
 
 CREATE TABLE `tbl_bangunanbakeuda` (
@@ -79,7 +82,7 @@ CREATE TABLE `tbl_bangunanbakeuda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_bangunanbakeuda`
+-- Dumping data for table `tbl_bangunanbakeuda`
 --
 
 INSERT INTO `tbl_bangunanbakeuda` (`id_bangunanbakeuda`, `judul`, `keterangan`, `nama_berkas`) VALUES
@@ -90,7 +93,7 @@ INSERT INTO `tbl_bangunanbakeuda` (`id_bangunanbakeuda`, `judul`, `keterangan`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_berita`
+-- Table structure for table `tbl_berita`
 --
 
 CREATE TABLE `tbl_berita` (
@@ -102,7 +105,7 @@ CREATE TABLE `tbl_berita` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_berita`
+-- Dumping data for table `tbl_berita`
 --
 
 INSERT INTO `tbl_berita` (`id_berita`, `judul`, `isi`, `nama_berkas`, `tanggal`) VALUES
@@ -114,7 +117,7 @@ INSERT INTO `tbl_berita` (`id_berita`, `judul`, `isi`, `nama_berkas`, `tanggal`)
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_download`
+-- Table structure for table `tbl_download`
 --
 
 CREATE TABLE `tbl_download` (
@@ -124,7 +127,7 @@ CREATE TABLE `tbl_download` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_download`
+-- Dumping data for table `tbl_download`
 --
 
 INSERT INTO `tbl_download` (`id_download`, `nama_berkas`, `keterangan_berkas`) VALUES
@@ -133,7 +136,7 @@ INSERT INTO `tbl_download` (`id_download`, `nama_berkas`, `keterangan_berkas`) V
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_galeri`
+-- Table structure for table `tbl_galeri`
 --
 
 CREATE TABLE `tbl_galeri` (
@@ -143,7 +146,7 @@ CREATE TABLE `tbl_galeri` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_galeri`
+-- Dumping data for table `tbl_galeri`
 --
 
 INSERT INTO `tbl_galeri` (`id_galeri`, `judul`, `nama_berkas`) VALUES
@@ -162,7 +165,7 @@ INSERT INTO `tbl_galeri` (`id_galeri`, `judul`, `nama_berkas`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_informasi`
+-- Table structure for table `tbl_informasi`
 --
 
 CREATE TABLE `tbl_informasi` (
@@ -172,7 +175,7 @@ CREATE TABLE `tbl_informasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_informasi`
+-- Dumping data for table `tbl_informasi`
 --
 
 INSERT INTO `tbl_informasi` (`id_informasi`, `nama_berkas`, `keterangan_berkas`) VALUES
@@ -181,7 +184,7 @@ INSERT INTO `tbl_informasi` (`id_informasi`, `nama_berkas`, `keterangan_berkas`)
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_profil`
+-- Table structure for table `tbl_profil`
 --
 
 CREATE TABLE `tbl_profil` (
@@ -192,7 +195,7 @@ CREATE TABLE `tbl_profil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_profil`
+-- Dumping data for table `tbl_profil`
 --
 
 INSERT INTO `tbl_profil` (`id_profil`, `nama`, `jabatan`, `nama_berkas`) VALUES
@@ -201,7 +204,7 @@ INSERT INTO `tbl_profil` (`id_profil`, `nama`, `jabatan`, `nama_berkas`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_situsterkait`
+-- Table structure for table `tbl_situsterkait`
 --
 
 CREATE TABLE `tbl_situsterkait` (
@@ -210,18 +213,10 @@ CREATE TABLE `tbl_situsterkait` (
   `nama_berkas` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data untuk tabel `tbl_situsterkait`
---
-
-INSERT INTO `tbl_situsterkait` (`id_situsterkait`, `link_situs`, `nama_berkas`) VALUES
-(1, 'testes', '01072013-seleb-0512.jpg'),
-(2, 'link link', 'no-image-found-360x25024.png');
-
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_slidegambarutama`
+-- Table structure for table `tbl_slidegambarutama`
 --
 
 CREATE TABLE `tbl_slidegambarutama` (
@@ -230,7 +225,7 @@ CREATE TABLE `tbl_slidegambarutama` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_slidegambarutama`
+-- Dumping data for table `tbl_slidegambarutama`
 --
 
 INSERT INTO `tbl_slidegambarutama` (`id_slidegambarutama`, `nama_berkas`) VALUES
@@ -241,7 +236,7 @@ INSERT INTO `tbl_slidegambarutama` (`id_slidegambarutama`, `nama_berkas`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_tentangbakeuda`
+-- Table structure for table `tbl_tentangbakeuda`
 --
 
 CREATE TABLE `tbl_tentangbakeuda` (
@@ -251,7 +246,7 @@ CREATE TABLE `tbl_tentangbakeuda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_tentangbakeuda`
+-- Dumping data for table `tbl_tentangbakeuda`
 --
 
 INSERT INTO `tbl_tentangbakeuda` (`id_tentangbakeuda`, `judul`, `keterangan`) VALUES
@@ -262,7 +257,7 @@ INSERT INTO `tbl_tentangbakeuda` (`id_tentangbakeuda`, `judul`, `keterangan`) VA
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_video`
+-- Table structure for table `tbl_video`
 --
 
 CREATE TABLE `tbl_video` (
@@ -274,7 +269,7 @@ CREATE TABLE `tbl_video` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_video`
+-- Dumping data for table `tbl_video`
 --
 
 INSERT INTO `tbl_video` (`id_video`, `judul`, `keterangan`, `link`, `status`) VALUES
@@ -287,137 +282,137 @@ INSERT INTO `tbl_video` (`id_video`, `judul`, `keterangan`, `link`, `status`) VA
 --
 
 --
--- Indeks untuk tabel `polling`
+-- Indexes for table `polling`
 --
 ALTER TABLE `polling`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tbl_bangunanbakeuda`
+-- Indexes for table `tbl_bangunanbakeuda`
 --
 ALTER TABLE `tbl_bangunanbakeuda`
   ADD PRIMARY KEY (`id_bangunanbakeuda`);
 
 --
--- Indeks untuk tabel `tbl_berita`
+-- Indexes for table `tbl_berita`
 --
 ALTER TABLE `tbl_berita`
   ADD PRIMARY KEY (`id_berita`);
 
 --
--- Indeks untuk tabel `tbl_download`
+-- Indexes for table `tbl_download`
 --
 ALTER TABLE `tbl_download`
   ADD PRIMARY KEY (`id_download`);
 
 --
--- Indeks untuk tabel `tbl_galeri`
+-- Indexes for table `tbl_galeri`
 --
 ALTER TABLE `tbl_galeri`
   ADD PRIMARY KEY (`id_galeri`);
 
 --
--- Indeks untuk tabel `tbl_informasi`
+-- Indexes for table `tbl_informasi`
 --
 ALTER TABLE `tbl_informasi`
   ADD PRIMARY KEY (`id_informasi`);
 
 --
--- Indeks untuk tabel `tbl_profil`
+-- Indexes for table `tbl_profil`
 --
 ALTER TABLE `tbl_profil`
   ADD PRIMARY KEY (`id_profil`);
 
 --
--- Indeks untuk tabel `tbl_situsterkait`
+-- Indexes for table `tbl_situsterkait`
 --
 ALTER TABLE `tbl_situsterkait`
   ADD PRIMARY KEY (`id_situsterkait`);
 
 --
--- Indeks untuk tabel `tbl_slidegambarutama`
+-- Indexes for table `tbl_slidegambarutama`
 --
 ALTER TABLE `tbl_slidegambarutama`
   ADD PRIMARY KEY (`id_slidegambarutama`);
 
 --
--- Indeks untuk tabel `tbl_tentangbakeuda`
+-- Indexes for table `tbl_tentangbakeuda`
 --
 ALTER TABLE `tbl_tentangbakeuda`
   ADD PRIMARY KEY (`id_tentangbakeuda`,`judul`);
 
 --
--- Indeks untuk tabel `tbl_video`
+-- Indexes for table `tbl_video`
 --
 ALTER TABLE `tbl_video`
   ADD PRIMARY KEY (`id_video`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `polling`
+-- AUTO_INCREMENT for table `polling`
 --
 ALTER TABLE `polling`
   MODIFY `id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_bangunanbakeuda`
+-- AUTO_INCREMENT for table `tbl_bangunanbakeuda`
 --
 ALTER TABLE `tbl_bangunanbakeuda`
   MODIFY `id_bangunanbakeuda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_berita`
+-- AUTO_INCREMENT for table `tbl_berita`
 --
 ALTER TABLE `tbl_berita`
   MODIFY `id_berita` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_download`
+-- AUTO_INCREMENT for table `tbl_download`
 --
 ALTER TABLE `tbl_download`
   MODIFY `id_download` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_galeri`
+-- AUTO_INCREMENT for table `tbl_galeri`
 --
 ALTER TABLE `tbl_galeri`
   MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_informasi`
+-- AUTO_INCREMENT for table `tbl_informasi`
 --
 ALTER TABLE `tbl_informasi`
   MODIFY `id_informasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_profil`
+-- AUTO_INCREMENT for table `tbl_profil`
 --
 ALTER TABLE `tbl_profil`
   MODIFY `id_profil` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_situsterkait`
+-- AUTO_INCREMENT for table `tbl_situsterkait`
 --
 ALTER TABLE `tbl_situsterkait`
   MODIFY `id_situsterkait` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_slidegambarutama`
+-- AUTO_INCREMENT for table `tbl_slidegambarutama`
 --
 ALTER TABLE `tbl_slidegambarutama`
   MODIFY `id_slidegambarutama` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_tentangbakeuda`
+-- AUTO_INCREMENT for table `tbl_tentangbakeuda`
 --
 ALTER TABLE `tbl_tentangbakeuda`
   MODIFY `id_tentangbakeuda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_video`
+-- AUTO_INCREMENT for table `tbl_video`
 --
 ALTER TABLE `tbl_video`
   MODIFY `id_video` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
