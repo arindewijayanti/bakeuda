@@ -56,8 +56,8 @@
                             <td width="30px"></td>
                             <td><img src="<?php echo base_url('assets/')?>logo.jpg" alt="" width="100"></td>
                             <td>
-                            <h4>&nbsp PEMERINTAH KOTA PADANGSIDIMPUAN</h4>
-                            <h4>&nbsp WEBSITE BADAN KEUANGAN DAERAH</h4>
+                            <h4>&nbsp WEBSITE BADAN PENGELOLAAN KEUANGAN</h4>
+                            <h4>&nbsp DAN PENDAPATAN DAERAH</h4>
                             </td>
                             <td>
                             <nav class="menu-wrapper">
@@ -66,7 +66,7 @@
                                 <b><li><a href="<?php echo base_url('welcome/tentangbakeuda')?>">Tentang Kami</a></b> </li>
                                 <b><li><a href="<?php echo base_url('welcome/informasi')?>">Informasi</a></li></b>
                                 <b><li><a href="<?php echo base_url('welcome/download')?>">Download</a></li></b>
-                                <b><li><a href="<?php echo base_url('welcome/situsterkait')?>">Situs Terkait</a></li></b>
+                                <b><li><a href="#">Situs Terkait</a></li></b>
                             </ul>
                             </nav>
                             </td>
